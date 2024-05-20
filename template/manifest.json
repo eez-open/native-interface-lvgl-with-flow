@@ -1,0 +1,22 @@
+{
+    "submodules": [
+        {
+            "name": "eez-framework",
+            "repository": "https://github.com/eez-open/eez-framework",
+            "path": "eez-framework"
+        },
+        { 
+            "name": "lvgl",
+            "repository": "https://github.com/littlevgl/lvgl.git",
+            "path": "lvgl",
+            "branch": "release/v8.3" 
+        },
+        {
+            "name": "lv_drivers",
+            "repository": "https://github.com/littlevgl/lv_drivers.git",
+            "path": "lv_drivers",
+            "branch": "release/v8.3"
+        }
+    ],
+    "eez-project-path": "native-interface-lvgl-with-flow.eez-project.eez-project"
+}

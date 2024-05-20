@@ -1,0 +1,4350 @@
+{
+  "objID": "6666cd76-f969-5646-9e7b-e39d750cc7d9",
+  "lvglStyles": {
+    "objID": "a31bd004-35c5-b3fb-5c8b-78ea5c7693b8",
+    "styles": [],
+    "defaultStyles": {}
+  },
+  "settings": {
+    "objID": "e007d988-9fba-797d-72e9-efc33ca6d05c",
+    "general": {
+      "objID": "fd434352-2277-c4a8-e87e-e96cfcbf2305",
+      "projectVersion": "v3",
+      "projectType": "lvgl",
+      "imports": [],
+      "flowSupport": true,
+      "displayWidth": 800,
+      "displayHeight": 480,
+      "description": "LVGL project template for the web browser using emscripten",
+      "keywords": "emscripten WebAssembly",
+      "targetPlatform": "Emscripten is a complete compiler toolchain to WebAssembly, using LLVM, with a special focus on speed, size, and the Web platform.",
+      "targetPlatformLink": "https://emscripten.org/",
+      "resourceFiles": []
+    },
+    "build": {
+      "objID": "72794a43-a0fc-13c2-7eb5-67dd952141a4",
+      "configurations": [
+        {
+          "objID": "bba0546c-06b8-604d-c43e-ecf1963e7492",
+          "name": "Default"
+        }
+      ],
+      "files": [
+        {
+          "objID": "05204dce-0fc5-4c81-b733-2ccc8e6c8671",
+          "fileName": "screens.h",
+          "template": "#ifndef EEZ_LVGL_UI_SCREENS_H\r\n#define EEZ_LVGL_UI_SCREENS_H\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n#ifdef __cplusplus\r\nextern \"C\" {\r\n#endif\r\n\r\n//${eez-studio LVGL_SCREENS_DECL}\r\n//${eez-studio LVGL_SCREENS_DECL_EXT}\r\n\r\n#ifdef __cplusplus\r\n}\r\n#endif\r\n\r\n#endif /*EEZ_LVGL_UI_SCREENS_H*/"
+        },
+        {
+          "objID": "2212bc5e-cf4a-4a81-c9ab-a671066d086f",
+          "fileName": "screens.c",
+          "template": "#include \"screens.h\"\n#include \"images.h\"\n#include \"fonts.h\"\n#include \"actions.h\"\n#include \"ui.h\"\n\n//${eez-studio LVGL_SCREENS_DEF}\n//${eez-studio LVGL_SCREENS_DEF_EXT}"
+        },
+        {
+          "objID": "19d3d573-88a3-4550-f4da-753b61d7f0c4",
+          "fileName": "actions.h",
+          "template": "#ifndef EEZ_LVGL_UI_EVENTS_H\r\n#define EEZ_LVGL_UI_EVENTS_H\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n//${eez-studio LVGL_ACTIONS_DECL}\r\n\r\n#endif /*EEZ_LVGL_UI_EVENTS_H*/"
+        },
+        {
+          "objID": "e95514b3-1083-49b9-a4f6-847d4792f050",
+          "fileName": "vars.h",
+          "template": "#ifndef EEZ_LVGL_UI_VARS_H\r\n#define EEZ_LVGL_UI_VARS_H\r\n\r\n#include <stdint.h>\r\n\r\n//${eez-studio LVGL_VARS_DECL}\r\n\r\n#endif /*EEZ_LVGL_UI_VARS_H*/"
+        },
+        {
+          "objID": "9c770003-b028-4a8b-9447-fea072e67b3a",
+          "fileName": "flow_def.h",
+          "template": "#ifndef EEZ_LVGL_UI_FLOW_DEF_H\n#define EEZ_LVGL_UI_FLOW_DEF_H\n\n#include <stdint.h>\n\n//${eez-studio GUI_ASSETS_DECL_COMPRESSED}\n\n#endif /*EEZ_LVGL_UI_FLOW_DEF_H*/"
+        },
+        {
+          "objID": "0f3ea37c-f0d3-4061-c693-76b52bd9d632",
+          "fileName": "flow_def.c",
+          "template": "#include <eez/core/vars.h>\n\n#include \"flow_def.h\"\n#include \"vars.h\"\n\n//${eez-studio GUI_ASSETS_DEF_COMPRESSED}\n\n//${eez-studio LVGL_NATIVE_VARS_TABLE_DEF}\n"
+        },
+        {
+          "objID": "81fa9cb7-33e4-4272-9340-49a50037b327",
+          "fileName": "images.h",
+          "template": "#ifndef EEZ_LVGL_UI_IMAGES_H\r\n#define EEZ_LVGL_UI_IMAGES_H\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n//${eez-studio LVGL_IMAGES_DECL}\r\n\r\n#endif /*EEZ_LVGL_UI_IMAGES_H*/"
+        },
+        {
+          "objID": "5844b3a8-54b7-4bdf-ff04-d052e689328c",
+          "fileName": "images.c",
+          "template": "#include \"images.h\"\n\n//${eez-studio LVGL_IMAGES_DEF}"
+        },
+        {
+          "objID": "bad0addd-10de-48f7-e57e-b40fce3e7c45",
+          "fileName": "fonts.h",
+          "template": "#ifndef EEZ_LVGL_UI_FONTS_H\r\n#define EEZ_LVGL_UI_FONTS_H\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n//${eez-studio LVGL_FONTS_DECL}\r\n\r\n#endif /*EEZ_LVGL_UI_FONTS_H*/"
+        },
+        {
+          "objID": "4743460c-3867-4a04-9673-213804dc3078",
+          "fileName": "styles.h",
+          "template": "#ifndef EEZ_LVGL_UI_STYLES_H\r\n#define EEZ_LVGL_UI_STYLES_H\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n#ifdef __cplusplus\r\nextern \"C\" {\r\n#endif\r\n\r\n//${eez-studio LVGL_STYLES_DECL}\r\n\r\n#ifdef __cplusplus\r\n}\r\n#endif\r\n\r\n#endif /*EEZ_LVGL_UI_STYLES_H*/"
+        },
+        {
+          "objID": "d6250de9-847c-4f7f-ed5c-41e7134db9f1",
+          "fileName": "styles.c",
+          "template": "#include \"styles.h\"\n#include \"images.h\"\n#include \"fonts.h\"\n\n//${eez-studio LVGL_STYLES_DEF}\n"
+        },
+        {
+          "objID": "7bc0152a-1716-469c-a3f8-8346707369a1",
+          "fileName": "ui.h",
+          "template": "#ifndef EEZ_LVGL_UI_GUI_H\n#define EEZ_LVGL_UI_GUI_H\n\n#include <eez/flow/lvgl_api.h>\n\nvoid ui_init();\nvoid ui_tick();\n\n#endif // EEZ_LVGL_UI_GUI_H"
+        },
+        {
+          "objID": "cb1d0e99-b8a8-43f7-815f-e6a8f7f5fe6f",
+          "fileName": "ui.c",
+          "template": "#include \"ui.h\"\n#include \"screens.h\"\n#include \"images.h\"\n#include \"flow_def.h\"\n\n//${eez-studio LVGL_ACTIONS_ARRAY_DEF}\n\nvoid ui_init() {\n    eez_flow_init(assets, sizeof(assets), (lv_obj_t **)&objects, sizeof(objects), images, sizeof(images), actions);\n}\n\nvoid ui_tick() {\n    eez_flow_tick();\n    tick_screen(g_currentScreen);\n}\n"
+        }
+      ],
+      "destinationFolder": "src/ui",
+      "lvglInclude": "lvgl/lvgl.h"
+    }
+  },
+  "variables": {
+    "objID": "c6c71e16-53e1-217f-d03b-cef56c6b037a",
+    "globalVariables": [],
+    "structures": [],
+    "enums": []
+  },
+  "actions": [],
+  "userPages": [
+    {
+      "objID": "4b40eba7-b31a-468a-b887-11dfd0b6637f",
+      "components": [
+        {
+          "objID": "2d76b841-eeb5-4a2c-81da-dbd4be70632c",
+          "type": "LVGLImageWidget",
+          "left": 130,
+          "top": 79,
+          "width": 220,
+          "height": 64,
+          "customInputs": [],
+          "customOutputs": [],
+          "style": {
+            "objID": "0b19b9b1-6ab9-455c-b8f7-4663a43fdf2b",
+            "inheritFrom": "default"
+          },
+          "timeline": [],
+          "eventHandlers": [],
+          "leftUnit": "px",
+          "topUnit": "px",
+          "widthUnit": "content",
+          "heightUnit": "content",
+          "children": [],
+          "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+          "hiddenFlagType": "literal",
+          "clickableFlagType": "literal",
+          "scrollbarMode": "auto",
+          "scrollDirection": "all",
+          "checkedStateType": "literal",
+          "disabledStateType": "literal",
+          "states": "",
+          "localStyles": {
+            "objID": "8a592882-0d02-46a5-80c3-df72553ddc61"
+          },
+          "image": "log_eez",
+          "pivotX": 0,
+          "pivotY": 0,
+          "zoom": 256,
+          "angle": 0
+        },
+        {
+          "objID": "c3b00b12-28c7-4c95-d54a-bbe58f0c3104",
+          "type": "LVGLImageWidget",
+          "left": 457,
+          "top": 79,
+          "width": 220,
+          "height": 70,
+          "customInputs": [],
+          "customOutputs": [],
+          "style": {
+            "objID": "d6868bfc-9ad2-427c-8f97-a11857378c95",
+            "inheritFrom": "default"
+          },
+          "timeline": [],
+          "eventHandlers": [],
+          "leftUnit": "px",
+          "topUnit": "px",
+          "widthUnit": "content",
+          "heightUnit": "content",
+          "children": [],
+          "flags": "PRESS_LOCK|ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+          "hiddenFlagType": "literal",
+          "clickableFlagType": "literal",
+          "scrollbarMode": "auto",
+          "scrollDirection": "all",
+          "checkedStateType": "literal",
+          "disabledStateType": "literal",
+          "states": "",
+          "localStyles": {
+            "objID": "2b4ba950-0529-413b-d378-02dd4fa19b30"
+          },
+          "image": "logo_lvgl",
+          "pivotX": 0,
+          "pivotY": 0,
+          "zoom": 256,
+          "angle": 0
+        },
+        {
+          "objID": "1c46cbe3-936f-468e-d4d0-6b93e194ec80",
+          "type": "LVGLLabelWidget",
+          "left": 0,
+          "top": 0,
+          "width": 150,
+          "height": 35,
+          "customInputs": [],
+          "customOutputs": [],
+          "style": {
+            "objID": "5dffb049-0a8f-49b9-9e04-5c01de563f90",
+            "inheritFrom": "default"
+          },
+          "timeline": [],
+          "eventHandlers": [],
+          "leftUnit": "px",
+          "topUnit": "px",
+          "widthUnit": "content",
+          "heightUnit": "content",
+          "children": [],
+          "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+          "hiddenFlagType": "literal",
+          "clickableFlagType": "literal",
+          "scrollbarMode": "auto",
+          "scrollDirection": "all",
+          "checkedStateType": "literal",
+          "disabledStateType": "literal",
+          "states": "",
+          "localStyles": {
+            "objID": "ae7a17a4-3214-44f8-f154-f102a9053931",
+            "definition": {
+              "MAIN": {
+                "DEFAULT": {
+                  "align": "CENTER",
+                  "text_font": "MONTSERRAT_32"
+                }
+              }
+            }
+          },
+          "text": "counter",
+          "textType": "expression",
+          "longMode": "WRAP",
+          "recolor": false
+        },
+        {
+          "objID": "34739d22-2efa-402d-ebe2-2946e5282349",
+          "type": "LVGLButtonWidget",
+          "left": 268,
+          "top": 348,
+          "width": 100,
+          "height": 40,
+          "customInputs": [],
+          "customOutputs": [],
+          "style": {
+            "objID": "2c324954-dffe-47ba-cbc6-e97ca21b6a88",
+            "inheritFrom": "default"
+          },
+          "timeline": [],
+          "eventHandlers": [
+            {
+              "objID": "c43f76ad-7561-46e4-f050-34a8422526cb",
+              "eventName": "PRESSED",
+              "handlerType": "flow"
+            }
+          ],
+          "leftUnit": "px",
+          "topUnit": "px",
+          "widthUnit": "px",
+          "heightUnit": "px",
+          "children": [
+            {
+              "objID": "6c627b80-0864-4642-d513-bf9025010946",
+              "type": "LVGLLabelWidget",
+              "left": 0,
+              "top": 0,
+              "width": 28,
+              "height": 52,
+              "customInputs": [],
+              "customOutputs": [],
+              "style": {
+                "objID": "ac11a4b4-15c5-46a9-fdeb-e0f86741d36d",
+                "inheritFrom": "default"
+              },
+              "timeline": [],
+              "eventHandlers": [],
+              "leftUnit": "px",
+              "topUnit": "px",
+              "widthUnit": "content",
+              "heightUnit": "content",
+              "children": [],
+              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+              "hiddenFlagType": "literal",
+              "clickableFlagType": "literal",
+              "scrollbarMode": "auto",
+              "scrollDirection": "all",
+              "checkedStateType": "literal",
+              "disabledStateType": "literal",
+              "states": "",
+              "localStyles": {
+                "objID": "5661b6e5-1720-4455-b045-3ddb340d87cd",
+                "definition": {
+                  "MAIN": {
+                    "DEFAULT": {
+                      "text_font": "MONTSERRAT_48",
+                      "align": "CENTER"
+                    }
+                  }
+                }
+              },
+              "text": "+",
+              "textType": "literal",
+              "longMode": "WRAP",
+              "recolor": false
+            }
+          ],
+          "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_ON_FOCUS|SCROLL_MOMENTUM|SCROLL_CHAIN",
+          "hiddenFlagType": "literal",
+          "clickableFlag": true,
+          "clickableFlagType": "literal",
+          "scrollbarMode": "auto",
+          "scrollDirection": "all",
+          "checkedStateType": "literal",
+          "disabledStateType": "literal",
+          "states": "",
+          "localStyles": {
+            "objID": "77010546-38ab-4a5e-a04f-f3e55ab58dd2"
+          }
+        },
+        {
+          "objID": "e6c88623-2256-4771-f786-b5e6d356f35b",
+          "type": "LVGLButtonWidget",
+          "left": 408,
+          "top": 348,
+          "width": 100,
+          "height": 40,
+          "customInputs": [],
+          "customOutputs": [],
+          "style": {
+            "objID": "2c324954-dffe-47ba-cbc6-e97ca21b6a88",
+            "inheritFrom": "default"
+          },
+          "timeline": [],
+          "eventHandlers": [
+            {
+              "objID": "c3538efb-e5bb-431b-9494-bc1c52dfc06d",
+              "eventName": "PRESSED",
+              "handlerType": "flow"
+            }
+          ],
+          "leftUnit": "px",
+          "topUnit": "px",
+          "widthUnit": "px",
+          "heightUnit": "px",
+          "children": [
+            {
+              "objID": "f0785b0d-a2be-4ecc-96a6-7d1e5bb601a1",
+              "type": "LVGLLabelWidget",
+              "left": 0,
+              "top": 0,
+              "width": 18,
+              "height": 52,
+              "customInputs": [],
+              "customOutputs": [],
+              "style": {
+                "objID": "88950bc0-9056-4dbd-efc2-14f2f1436efb",
+                "inheritFrom": "default"
+              },
+              "timeline": [],
+              "eventHandlers": [],
+              "leftUnit": "px",
+              "topUnit": "px",
+              "widthUnit": "content",
+              "heightUnit": "content",
+              "children": [],
+              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+              "hiddenFlagType": "literal",
+              "clickableFlagType": "literal",
+              "scrollbarMode": "auto",
+              "scrollDirection": "all",
+              "checkedStateType": "literal",
+              "disabledStateType": "literal",
+              "states": "",
+              "localStyles": {
+                "objID": "71393c8b-e295-400f-f3ee-e6ed3f0d72a1",
+                "definition": {
+                  "MAIN": {
+                    "DEFAULT": {
+                      "text_font": "MONTSERRAT_48",
+                      "align": "CENTER"
+                    }
+                  }
+                }
+              },
+              "text": "-",
+              "textType": "literal",
+              "longMode": "WRAP",
+              "recolor": false
+            }
+          ],
+          "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_ON_FOCUS|SCROLL_MOMENTUM|SCROLL_CHAIN",
+          "hiddenFlagType": "literal",
+          "clickableFlag": true,
+          "clickableFlagType": "literal",
+          "scrollbarMode": "auto",
+          "scrollDirection": "all",
+          "checkedStateType": "literal",
+          "disabledStateType": "literal",
+          "states": "",
+          "localStyles": {
+            "objID": "77010546-38ab-4a5e-a04f-f3e55ab58dd2"
+          }
+        },
+        {
+          "objID": "9e57303c-cc4b-4ba3-8fae-ba096f2cf716",
+          "type": "SetVariableActionComponent",
+          "left": 141,
+          "top": 532,
+          "width": 177,
+          "height": 56,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "998d16f4-e74e-4329-bb68-a343ad6704f7",
+              "variable": "counter",
+              "value": "counter + 1"
+            }
+          ]
+        },
+        {
+          "objID": "f327ef7f-640a-4b30-d3a7-f5537497e4e8",
+          "type": "SetVariableActionComponent",
+          "left": 495,
+          "top": 532,
+          "width": 177,
+          "height": 56,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "998d16f4-e74e-4329-bb68-a343ad6704f7",
+              "variable": "counter",
+              "value": "counter - 1"
+            }
+          ]
+        }
+      ],
+      "connectionLines": [
+        {
+          "objID": "a2f2d94c-3a56-4c14-d888-bb5ceb638090",
+          "source": "34739d22-2efa-402d-ebe2-2946e5282349",
+          "output": "PRESSED",
+          "target": "9e57303c-cc4b-4ba3-8fae-ba096f2cf716",
+          "input": "@seqin"
+        },
+        {
+          "objID": "465b7380-d672-4145-82c5-1d81376c2770",
+          "source": "e6c88623-2256-4771-f786-b5e6d356f35b",
+          "output": "PRESSED",
+          "target": "f327ef7f-640a-4b30-d3a7-f5537497e4e8",
+          "input": "@seqin"
+        }
+      ],
+      "localVariables": [
+        {
+          "objID": "bf317e2b-72cf-4cab-c1c2-56ab28db5307",
+          "name": "counter",
+          "type": "integer",
+          "defaultValue": "0",
+          "persistent": false
+        }
+      ],
+      "name": "Main",
+      "left": 0,
+      "top": 0,
+      "width": 800,
+      "height": 480,
+      "lvglLocalStyles": {
+        "objID": "e85dbd5d-8325-1629-003b-86fd654ae635"
+      }
+    }
+  ],
+  "userWidgets": [],
+  "fonts": [
+    {
+      "objID": "7a6ac63f-a101-4881-f6d7-0cd31cf44392",
+      "name": "Small Font",
+      "renderingEngine": "LVGL",
+      "source": {
+        "objID": "9195f642-af34-476d-8c33-4f7e73abbb68",
+        "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+        "size": 16
+      },
+      "bpp": 8,
+      "threshold": 128,
+      "height": 22,
+      "ascent": 17,
+      "descent": 5,
+      "glyphs": [
+        {
+          "objID": "9772ce04-4819-47f3-c849-06d779f7c582",
+          "encoding": 32,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "dx": 4.416015625,
+          "glyphBitmap": {
+            "width": 0,
+            "height": 0,
+            "pixelArray": ""
+          },
+          "source": {
+            "objID": "f893a134-4031-45e0-adc0-27a9a111fc79",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 32
+          }
+        },
+        {
+          "objID": "4adbd606-1335-498a-fdd2-56473dc40a89",
+          "encoding": 33,
+          "x": 0,
+          "y": 0,
+          "width": 4,
+          "height": 12,
+          "dx": 4.4480133056640625,
+          "glyphBitmap": {
+            "width": 4,
+            "height": 12,
+            "pixelArray": "00eaff6500deff5800d2ff4b00c5ff3e00b9ff3200adff2500a0ff180079d00a00000000004b7f0c05faff6f00b1ec35"
+          },
+          "source": {
+            "objID": "0c5a0717-f737-493b-ebb1-78cc50b690e9",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 33
+          }
+        },
+        {
+          "objID": "449d26c5-9283-426d-9399-497d4af0104e",
+          "encoding": 34,
+          "x": 0,
+          "y": 7,
+          "width": 6,
+          "height": 5,
+          "dx": 6.6080169677734375,
+          "glyphBitmap": {
+            "width": 6,
+            "height": 5,
+            "pixelArray": "18ff9c01ffb311ff9400faaa09ff8c00f3a201ff8400ec99009c4e00905b"
+          },
+          "source": {
+            "objID": "0ea239ff-6795-41cd-f8b2-9e62266db54b",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 34
+          }
+        },
+        {
+          "objID": "5094d294-f606-4000-8157-63bcad9d2844",
+          "encoding": 35,
+          "x": 0,
+          "y": 0,
+          "width": 12,
+          "height": 12,
+          "dx": 11.376022338867188,
+          "glyphBitmap": {
+            "width": 12,
+            "height": 12,
+            "pixelArray": "0000007afa020053ff21000000000096df000070fd050000000000b2c200008de600000018fffffffffffffffffffe000c8484fac28484e8d384840100000cff680000e78d00000000002cff470007fe6e0000005284a5ff9b8491ffae843f00a0ffffffffffffffffff7c00000087ed00005eff160000000000a4cf00007af8010000000000c1b2000096de00000000"
+          },
+          "source": {
+            "objID": "d579bbe5-8e05-4d57-987c-22d77d22b44d",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 35
+          }
+        },
+        {
+          "objID": "db2ec30c-3789-4f92-9f95-0322939dd600",
+          "encoding": 36,
+          "x": 0,
+          "y": -2,
+          "width": 10,
+          "height": 16,
+          "dx": 10.06402587890625,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 16,
+            "pixelArray": "000000005889000000000000000084cc0000000000005bc3f8ffefb44500007ffffff3f5f0ffd80009fafc3f84cc024552002affea0084cc000000000df5ffa3a4cc000000000066fcfffff59e44000000002d92e6ffffffa8010000000084d880faff4d0001000084cc009eff7508cf570484cc12d3ff4f44fffff2e9f7f6ffc5030045b0e9fdffd88409000000000084cc000000000000000084cc00000000"
+          },
+          "source": {
+            "objID": "d1697bce-8784-4dac-952e-e62f52485a71",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 36
+          }
+        },
+        {
+          "objID": "cdce8e90-055e-4b56-944c-45a06945f295",
+          "encoding": 37,
+          "x": 0,
+          "y": 0,
+          "width": 14,
+          "height": 12,
+          "dx": 13.760025024414062,
+          "glyphBitmap": {
+            "width": 14,
+            "height": 12,
+            "pixelArray": "0050dbee9b0900000066fb2f00001ef87d42e282000019ef8700000062e8000080cd0000acdb0800000068e0000078d3004fff42000000002dfe4c12ce960ee49e00000000000078fcffc71596e912000000000000000b1b003bfe581fb9efc32a000000000006d6b500c2ba3aabd8030000000080f31e0dff3e0028ff270000002af96f000dff390022ff28000001c5c9020000c5a31994da0300006afb2e00000021bef3c82d00"
+          },
+          "source": {
+            "objID": "6bb01afa-1f70-4f6b-e1c0-dca0d3847deb",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 37
+          }
+        },
+        {
+          "objID": "70677201-120b-4bae-c92b-dd478ba10e6f",
+          "encoding": 38,
+          "x": 0,
+          "y": -1,
+          "width": 12,
+          "height": 13,
+          "dx": 11.2960205078125,
+          "glyphBitmap": {
+            "width": 12,
+            "height": 13,
+            "pixelArray": "00000c91e3f4c437000000000000a2ffb289edeb0a0000000000f0e5010081ff300000000000e0fb1e14d3f611000000000067ffd6e8fd620000000000002ff1ffff4b0000000000004ff9edb2ffcb1121cb4a0011f1ef220196ffcd80ff570049ffa800000196ffffeb0b003cffe117000025ecffd30e0001bcfff4c0cffaffcfffbd0000097ed8f9efb748019b5700000000000000000000000000"
+          },
+          "source": {
+            "objID": "a8fc7edc-170f-4d7c-a171-b5e17f53fdd0",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 38
+          }
+        },
+        {
+          "objID": "54393b68-bb84-4972-d6de-eb4f6bdba789",
+          "encoding": 39,
+          "x": 0,
+          "y": 7,
+          "width": 3,
+          "height": 5,
+          "dx": 3.5200042724609375,
+          "glyphBitmap": {
+            "width": 3,
+            "height": 5,
+            "pixelArray": "18ff9c11ff9409ff8c01ff84009c4e"
+          },
+          "source": {
+            "objID": "f407d394-cf4f-4848-c545-1df5d51558df",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 39
+          }
+        },
+        {
+          "objID": "14ff0852-2cb3-465a-fe75-fb408f5dcfbd",
+          "encoding": 40,
+          "x": 1,
+          "y": -3,
+          "width": 5,
+          "height": 15,
+          "dx": 5.5520172119140625,
+          "glyphBitmap": {
+            "width": 5,
+            "height": 15,
+            "pixelArray": "000deaea0a007cff7a0000dbfe1c002bffcc00005eff98000087ff6f000099ff5e0000a4ff53000099ff5e000087ff6f00005eff9900002bffcc000000dafe1c00007bff7a00000deaea0a"
+          },
+          "source": {
+            "objID": "eaf7024a-d762-4ee9-ca96-81a6a7934117",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 40
+          }
+        },
+        {
+          "objID": "e513e92a-3e96-4a96-eadf-e36d9a2dd8cf",
+          "encoding": 41,
+          "x": 0,
+          "y": -3,
+          "width": 5,
+          "height": 15,
+          "dx": 5.5680084228515625,
+          "glyphBitmap": {
+            "width": 5,
+            "height": 15,
+            "pixelArray": "67ff85000007e7f514000091ff68000041ffb700000dfee9000000e1ff130000cfff240000c4ff300000cfff240000e1ff13000efee9000041ffb7000091ff670007e6f4130067ff840000"
+          },
+          "source": {
+            "objID": "59029356-ad78-4133-c95a-0d52cd5e4d12",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 41
+          }
+        },
+        {
+          "objID": "81b77f44-d261-40e0-f102-9f626d458913",
+          "encoding": 42,
+          "x": 0,
+          "y": 5,
+          "width": 7,
+          "height": 7,
+          "dx": 6.6560211181640625,
+          "glyphBitmap": {
+            "width": 7,
+            "height": 7,
+            "pixelArray": "000047ef00000063a05bed38c41942d6fcfdfda919077cfeffe6460089eda0f19afd31131447ee00270000001c5d000000"
+          },
+          "source": {
+            "objID": "3762d7bc-cac5-4509-93c9-f071feb7ac73",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 42
+          }
+        },
+        {
+          "objID": "1d9427a1-1002-4e3c-e772-1451a2c983a8",
+          "encoding": 43,
+          "x": 1,
+          "y": 2,
+          "width": 8,
+          "height": 8,
+          "dx": 9.440017700195312,
+          "glyphBitmap": {
+            "width": 8,
+            "height": 8,
+            "pixelArray": "000010804a000000000020ff94000000000020ff94000000a3acb6ffdcacac48f4ffffffffffff6c000020ff94000000000020ff94000000000020ff94000000"
+          },
+          "source": {
+            "objID": "e9615438-bb65-49d3-9a1d-3880d67a8235",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 43
+          }
+        },
+        {
+          "objID": "f7793c5d-c4f5-4884-c4fb-ac1c4b33d8ed",
+          "encoding": 44,
+          "x": 0,
+          "y": -3,
+          "width": 4,
+          "height": 6,
+          "dx": 3.9040069580078125,
+          "glyphBitmap": {
+            "width": 4,
+            "height": 6,
+            "pixelArray": "00120f0023f5ee173effff3701bbec0500d8980018ff4000"
+          },
+          "source": {
+            "objID": "3943fed1-ebf5-4f53-802e-8c15d30ccd77",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 44
+          }
+        },
+        {
+          "objID": "33015820-8527-4f92-901c-0a50ce970bad",
+          "encoding": 45,
+          "x": 0,
+          "y": 4,
+          "width": 6,
+          "height": 2,
+          "dx": 6.1600189208984375,
+          "glyphBitmap": {
+            "width": 6,
+            "height": 2,
+            "pixelArray": "17bcbcbcbc3420ffffffff48"
+          },
+          "source": {
+            "objID": "0167bdb5-e3ac-4ac2-b794-1fe03a75d5ed",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 45
+          }
+        },
+        {
+          "objID": "0e88186b-2d41-479b-f487-b02ccfd0241d",
+          "encoding": 46,
+          "x": 0,
+          "y": 0,
+          "width": 4,
+          "height": 3,
+          "dx": 3.9040069580078125,
+          "glyphBitmap": {
+            "width": 4,
+            "height": 3,
+            "pixelArray": "0aa1950350ffff381addd00d"
+          },
+          "source": {
+            "objID": "1ab70023-4a39-4803-eeef-9bfcc12aea62",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 46
+          }
+        },
+        {
+          "objID": "ed37cc0e-ee1e-4954-bb96-7f70ad121796",
+          "encoding": 47,
+          "x": -1,
+          "y": -2,
+          "width": 8,
+          "height": 16,
+          "dx": 5.936004638671875,
+          "glyphBitmap": {
+            "width": 8,
+            "height": 16,
+            "pixelArray": "000000000025804100000000008bff400000000001e1e602000000003aff91000000000091ff3a0000000002e6e201000000003fff8c000000000097ff350000000003eadd000000000045ff8600000000009cff2f0000000005eed700000000004bff800000000000a2ff290000000007f1d2000000000050ff7b0000000000"
+          },
+          "source": {
+            "objID": "e5f0c333-0d66-4058-d46f-b66e6483c890",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 47
+          }
+        },
+        {
+          "objID": "7113ab61-e59f-4aff-9aa9-9c74ff0b6b34",
+          "encoding": 48,
+          "x": 0,
+          "y": 0,
+          "width": 11,
+          "height": 12,
+          "dx": 10.768020629882812,
+          "glyphBitmap": {
+            "width": 11,
+            "height": 12,
+            "pixelArray": "00000e8ae0f6d26a010000000bcefffbe8ffff9b00000085ffcd190037efff480002e8ff3500000075ffad0028ffec000000002affec0041ffd1000000000efffe0541ffd1000000000efffe0528ffec000000002affec0001e7ff3500000075ffac000083ffcd1b0039efff4600000acdfffcebffff99000000000e8be0f6d36b010000"
+          },
+          "source": {
+            "objID": "8706e061-0468-4abe-cc8c-5b5300d712be",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 48
+          }
+        },
+        {
+          "objID": "f1da8e94-c94a-48a8-c63d-2f94a6fa4d1b",
+          "encoding": 49,
+          "x": 0,
+          "y": 0,
+          "width": 5,
+          "height": 12,
+          "dx": 6.09600830078125,
+          "glyphBitmap": {
+            "width": 5,
+            "height": 12,
+            "pixelArray": "e0ffffff94b9d4eaff94000080ff94000080ff94000080ff94000080ff94000080ff94000080ff94000080ff94000080ff94000080ff94000080ff94"
+          },
+          "source": {
+            "objID": "b3e379ae-12f3-47eb-ca58-e02286061161",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 49
+          }
+        },
+        {
+          "objID": "37815352-f699-4be5-f360-c5dcdf817de4",
+          "encoding": 50,
+          "x": 0,
+          "y": 0,
+          "width": 9,
+          "height": 12,
+          "dx": 9.31201171875,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 12,
+            "pixelArray": "003faee9f7d7820c0076fffff3eaffffc70340df5402003af6ff42000400000000c2ff5d000000000004e5ff3a000000000082ffd002000000006bfff02c000000006afff33c0000000068fef43d0000000066fef43e000000004bfeffefd4d4d4d4ac70ffffffffffffffd0"
+          },
+          "source": {
+            "objID": "a9ea9cf3-ef68-42eb-d4d4-f4d3ed99195a",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 50
+          }
+        },
+        {
+          "objID": "fd5518b2-c0d5-426d-8fdb-be7dd06fc6e5",
+          "encoding": 51,
+          "x": 0,
+          "y": 0,
+          "width": 9,
+          "height": 12,
+          "dx": 9.31201171875,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 12,
+            "pixelArray": "70ffffffffffffff305cd4d4d4d4e6fff61b000000000dd6ff5b0000000000adff91000000000079ffc9040000000000e3ffffd343000000007c96cffffa28000000000000b4ff870000000000007fff9d63a72f00002de1ff6bc7fffff3eeffffd20b0f78c8f2f8da880e00"
+          },
+          "source": {
+            "objID": "9a8e74af-d42d-4c9a-a9d4-cb9d9b2fd0ca",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 51
+          }
+        },
+        {
+          "objID": "2c287201-6646-44bb-96c5-983a575fe0cf",
+          "encoding": 52,
+          "x": 0,
+          "y": 0,
+          "width": 11,
+          "height": 12,
+          "dx": 10.864028930664062,
+          "glyphBitmap": {
+            "width": 11,
+            "height": 12,
+            "pixelArray": "00000000004fffdd0e0000000000001dedfb3600000000000003c3ff780000000000000083ffbd0200000000000042fdec1a0b2c1e00000015e6ff4d0040ffb4000001b6ff93000040ffb400005cffffdad4d4dffff2d49174ffffffffffffffffffb000000000000050ffb4000000000000000050ffb4000000000000000050ffb40000"
+          },
+          "source": {
+            "objID": "6d16df46-5d1a-410d-dd13-cc911a149238",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 52
+          }
+        },
+        {
+          "objID": "3a6ecee2-f72a-465c-af78-e51dac54c243",
+          "encoding": 53,
+          "x": 0,
+          "y": 0,
+          "width": 9,
+          "height": 12,
+          "dx": 9.344024658203125,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 12,
+            "pixelArray": "006fffffffffffff300084ffe4d4d4d4d4270099ff52000000000000aeff3f000000000000c3ff2d000000000000d8fffffbe6ad360000c6d8d8e7fcfff93d000000000016b3ffb40000000000004fffcf2bb73c020015b6ffa495fffff6eafdfff2290565bcedfae6a42600"
+          },
+          "source": {
+            "objID": "96416fac-488b-404e-f0a0-3c2261269758",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 53
+          }
+        },
+        {
+          "objID": "6ac96272-4a01-4b3c-9113-fd120a16275c",
+          "encoding": 54,
+          "x": 0,
+          "y": 0,
+          "width": 10,
+          "height": 12,
+          "dx": 10.032012939453125,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 12,
+            "pixelArray": "00000052bceaf5d78506000098ffffeed9f5c500005fffe2410000091d0000d5ff450000000000001fffef1d83ac9e5300003cffeef1ffffffffa60046ffffd6350b48efff5033ffff4500000081ff9309f8ff3000000070ff9500a3ffa304000ed1ff5a0019e1ffe2beecffc50500001897e3fae18a0b00"
+          },
+          "source": {
+            "objID": "a3ae76d1-1437-42bc-b0ce-9d049764fb36",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 54
+          }
+        },
+        {
+          "objID": "02c33c08-96f2-4f1c-c391-ab5768b73dd9",
+          "encoding": 55,
+          "x": 0,
+          "y": 0,
+          "width": 10,
+          "height": 12,
+          "dx": 9.72802734375,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 12,
+            "pixelArray": "8cffffffffffffffff288cffe7d8d8d8e2fffe198cff640000007effb9007ce459000003e4ff4f00000000000052ffe103000000000000bcff7b00000000000026fefa1700000000000090ffa80000000000000aefff3e00000000000064ffd300000000000000cdff6a00000000000037fff30d00000000"
+          },
+          "source": {
+            "objID": "75723647-4668-47e1-bf09-a6ea6246dcf1",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 55
+          }
+        },
+        {
+          "objID": "a31e81ab-2c78-4a40-f204-91717689a1a6",
+          "encoding": 56,
+          "x": 0,
+          "y": 0,
+          "width": 10,
+          "height": 12,
+          "dx": 10.432022094726562,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 12,
+            "pixelArray": "00004abcf0f8d8820c000059ffffcfbff3ffc20100d3ff69000017e6ff4200ebff26000000b7ff5900aaffa61b0a54f7f81d0015deffffffffff5b000093fff2a79ad1ffdf1b2cfff21e000000a2ff9853ffc9000000005affc22cfff736000009b7ff9b00a0fffdcbbeecffe922000367c6f1f9de961c00"
+          },
+          "source": {
+            "objID": "7c4a2451-7a9e-45f5-efe7-99314afc9934",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 56
+          }
+        },
+        {
+          "objID": "43d0625e-6c1f-4f5b-e890-d7140014a62d",
+          "encoding": 57,
+          "x": 0,
+          "y": 0,
+          "width": 10,
+          "height": 12,
+          "dx": 10.032012939453125,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 12,
+            "pixelArray": "000a87dff9e49919000004c1ffeebfe0ffe31b0055ffd61100039bffa8008eff7700000028fffb0d8cff870000003effff3a4afff14a0a30d2ffff4e00a4fffffffff4ecff420000549ead8823eaff2600000000000040ffdb00001d0c000040e1ff670000bff8ddf0ffff9f00000382d7f5edbf58000000"
+          },
+          "source": {
+            "objID": "796cb33f-567b-4858-a164-4e8b9b49626f",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 57
+          }
+        },
+        {
+          "objID": "3d919f87-172c-4e5d-f014-2c5989923897",
+          "encoding": 58,
+          "x": 0,
+          "y": 0,
+          "width": 4,
+          "height": 9,
+          "dx": 3.9040069580078125,
+          "glyphBitmap": {
+            "width": 4,
+            "height": 9,
+            "pixelArray": "1addd10e50ffff370aa194020000000000000000000000000aa1950350ffff381addd00d"
+          },
+          "source": {
+            "objID": "fed8e82a-14ab-4588-8ca2-5d5f90a507f8",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 58
+          }
+        },
+        {
+          "objID": "ce52731a-8e7e-47c6-9fa1-fa360bb36251",
+          "encoding": 59,
+          "x": 0,
+          "y": -3,
+          "width": 4,
+          "height": 12,
+          "dx": 3.9040069580078125,
+          "glyphBitmap": {
+            "width": 4,
+            "height": 12,
+            "pixelArray": "1addd10e50ffff370aa1940200000000000000000000000016dbd20e44ffff3a07c8f50c00cda8000ffd4f00082c0400"
+          },
+          "source": {
+            "objID": "ba315ce5-a213-4581-a818-97ff776bffcc",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 59
+          }
+        },
+        {
+          "objID": "42643034-1ffa-4691-d1ba-397dbb84a0b1",
+          "encoding": 60,
+          "x": 1,
+          "y": 1,
+          "width": 8,
+          "height": 9,
+          "dx": 9.440017700195312,
+          "glyphBitmap": {
+            "width": 8,
+            "height": 9,
+            "pixelArray": "00000000000658440000002389eaff6c0452bafeffc4600addffe98b28000000f4fe9c33000000003ea7f9ffd06d120000001576dcfff852000000000145ad670000000000000000"
+          },
+          "source": {
+            "objID": "3357d7f1-3f0e-42ff-a55d-a489b5592c08",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 60
+          }
+        },
+        {
+          "objID": "8c5e7a06-e045-4b51-fc7d-7dfebc2ec765",
+          "encoding": 61,
+          "x": 1,
+          "y": 3,
+          "width": 8,
+          "height": 6,
+          "dx": 9.440017700195312,
+          "glyphBitmap": {
+            "width": 8,
+            "height": 6,
+            "pixelArray": "f4ffffffffffff6ca3acacacacacac4800000000000000000000000000000000f4ffffffffffff6ca3acacacacacac48"
+          },
+          "source": {
+            "objID": "bdfe4d01-ec3b-4c62-d416-885cc0df1de5",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 61
+          }
+        },
+        {
+          "objID": "21648c66-8774-45d0-9812-476024abab20",
+          "encoding": 62,
+          "x": 1,
+          "y": 1,
+          "width": 8,
+          "height": 9,
+          "dx": 9.440017700195312,
+          "glyphBitmap": {
+            "width": 8,
+            "height": 9,
+            "pixelArray": "8022000000000000f4feb951040000003196f0ffe5821d000000095ec2fffd58000000106ae1ff6c0140a3f6ffd67010d3fff9a63f000000cf761400000000000000000000000000"
+          },
+          "source": {
+            "objID": "1a9e36d6-526d-42f4-8c43-d4a03f4bb644",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 62
+          }
+        },
+        {
+          "objID": "8bcf48a9-d826-430e-8884-ede9e078d05c",
+          "encoding": 63,
+          "x": 0,
+          "y": 0,
+          "width": 9,
+          "height": 12,
+          "dx": 9.2960205078125,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 12,
+            "pixelArray": "0041b1e9f8dc8d140073ffffe3d7fcffd30554de47000031f7ff3d000200000000d4ff3a000000000047fee709000000003df4f6410000000015edfc48000000000063ffad0000000000000104020000000000001f8731000000000000a4ffc70000000000005ff37f000000"
+          },
+          "source": {
+            "objID": "d5e8dd76-029e-46e8-dffd-da6cf8e5ebb3",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 63
+          }
+        },
+        {
+          "objID": "ead0cfd0-014e-45d4-9c86-220c2b7fa6fc",
+          "encoding": 64,
+          "x": 0,
+          "y": -3,
+          "width": 16,
+          "height": 15,
+          "dx": 16.544036865234375,
+          "glyphBitmap": {
+            "width": 16,
+            "height": 15,
+            "pixelArray": "000000001979c7e6f7deb5580700000000000063f6f2a075647db9fdd32a0000000078ff9b0c000000000027ccf12600003afc8d0002518e8a3a469c3ad2d00100b0dc0504b4ffffffffd6ff5031ff470efb7b0072ffc3281172ffff5000cb9e2fff4800cffd1c000000adff50009bc144ff3300f0e20000000077ff500085d42eff4900e1f4020000008cff500095bc0dfa7e009eff6e000018eaff5901d28e00aede0521f0ffb7a0eaddffd9b7fc27003afc8e002ab6f3ee9f1191f4e1590000007bff9a0c0000000000000000000000000068f8f3a37a6a7fb98b00000000000000001c7ecae9f8e1b04b00000000"
+          },
+          "source": {
+            "objID": "36bfd8af-05ee-4648-e5ea-65de44930521",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 64
+          }
+        },
+        {
+          "objID": "4af49dff-6c4d-4138-9e86-ab31b2de6076",
+          "encoding": 65,
+          "x": -1,
+          "y": 0,
+          "width": 14,
+          "height": 12,
+          "dx": 11.984024047851562,
+          "glyphBitmap": {
+            "width": 14,
+            "height": 12,
+            "pixelArray": "000000000042ffff3900000000000000000000adffffa50000000000000000001cfcd5e2f917000000000000000084ff6c7cff7c0000000000000006e9f40f18fae3040000000000005aff9b0000aaff54000000000000c6ff33000040ffbf000000000031fffbb4b4b4b4feff2b000000009cffffffffffffffff9700000011f6f20a0000000012f9f30e000073ff9d000000000000acff6e0001dcff3f0000000000004cffd801"
+          },
+          "source": {
+            "objID": "df03d826-92a4-423b-da73-0fa722afbcf1",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 65
+          }
+        },
+        {
+          "objID": "e4b00f00-e474-40d9-9334-6c8d2ffc2d58",
+          "encoding": 66,
+          "x": 1,
+          "y": 0,
+          "width": 11,
+          "height": 12,
+          "dx": 12.176025390625,
+          "glyphBitmap": {
+            "width": 11,
+            "height": 12,
+            "pixelArray": "80ffffffffffe8bb44000080ffdfb4b4b7dcffff560080ff940000000194ffc40080ff940000000044ffd60080ff940000000090ffa10080ffdeb0b0b3d9ffdf1d0080ffffffffffffffeb580080ff940000000e54f5fc2480ff940000000000b2ff6680ff940000000014e2ff5d80ffdfb4b4b4c1f4ffe30f80fffffffffffae09a1c00"
+          },
+          "source": {
+            "objID": "6893822c-fb62-4c7f-e3a3-95c3041c4295",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 66
+          }
+        },
+        {
+          "objID": "93406cf3-1912-49d8-a773-073aabc50a87",
+          "encoding": 67,
+          "x": 0,
+          "y": 0,
+          "width": 12,
+          "height": 12,
+          "dx": 11.63201904296875,
+          "glyphBitmap": {
+            "width": 12,
+            "height": 12,
+            "pixelArray": "0000002290daf7ecb9540000000056f4ffffeef6ffffa8040037faff9e1f00034be08f0000c0ff9a000000000010000019fffb1700000000000000003dffda0000000000000000003dffda0000000000000000001afffb17000000000000000000c3ff9a0000000000160100003afbff9d20000451e49601000059f6fffff2f9ffffa5030000002594dbf7edb8520000"
+          },
+          "source": {
+            "objID": "308b10d7-826e-4002-df47-0f93dcaa811d",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 67
+          }
+        },
+        {
+          "objID": "ee7d3465-ebcd-42db-c58f-337b20438970",
+          "encoding": 68,
+          "x": 1,
+          "y": 0,
+          "width": 12,
+          "height": 12,
+          "dx": 13.216033935546875,
+          "glyphBitmap": {
+            "width": 12,
+            "height": 12,
+            "pixelArray": "80fffffffffae0a73f00000080ffefd8d8dff9ffff90000080ff940000000b6cf6ff740080ff94000000000054fff10b80ff94000000000000d6ff5280ff94000000000000a2ff7480ff94000000000000a2ff7580ff94000000000000d5ff5380ff94000000000051fff20c80ff940000000968f4ff760080ffedd4d4dbf7ffff91010080fffffffffbe1a840000000"
+          },
+          "source": {
+            "objID": "026f45e3-d2a8-4296-8049-168676ebb2ef",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 68
+          }
+        },
+        {
+          "objID": "c764b096-d009-4b10-ccb9-be5dd403e69e",
+          "encoding": 69,
+          "x": 1,
+          "y": 0,
+          "width": 9,
+          "height": 12,
+          "dx": 10.720016479492188,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 12,
+            "pixelArray": "80ffffffffffffffb080ffedd4d4d4d4d49180ff9400000000000080ff9400000000000080ff9400000000000080ffe8c8c8c8c8c40080fffffffffffffc0080ff9400000000000080ff9400000000000080ff9400000000000080ffebd0d0d0d0d0bc80ffffffffffffffe8"
+          },
+          "source": {
+            "objID": "26b8ab1d-3d77-484d-92fd-ebeff228a707",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 69
+          }
+        },
+        {
+          "objID": "46b218c4-c54b-4cea-aa19-dadb6f849675",
+          "encoding": 70,
+          "x": 1,
+          "y": 0,
+          "width": 9,
+          "height": 12,
+          "dx": 10.1920166015625,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 12,
+            "pixelArray": "80ffffffffffffffb080ffedd4d4d4d4d49180ff9400000000000080ff9400000000000080ff9400000000000080ff9400000000000080fffffffffffffc0080ffedd4d4d4d4d00080ff9400000000000080ff9400000000000080ff9400000000000080ff94000000000000"
+          },
+          "source": {
+            "objID": "5116d4c8-6243-482d-9f02-d4334088ac14",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 70
+          }
+        },
+        {
+          "objID": "ee01f9d6-abd9-41a1-b261-28f92989f56c",
+          "encoding": 71,
+          "x": 0,
+          "y": 0,
+          "width": 12,
+          "height": 12,
+          "dx": 12.352020263671875,
+          "glyphBitmap": {
+            "width": 12,
+            "height": 12,
+            "pixelArray": "000000218dd8f6eec2670400000055f3ffffeff4ffffc60e0037faff9d2000013dcda60300c0ff96000000000009030019fffb1600000000000000003dffda0000000000001e24043dffda000000000000d8ff2019fffc180000000000d8ff2000c0ff9e0000000000d8ff200037faffa62500023aeaff20000055f4fffff3f9ffffe1110000002290d9f7f0c5720d00"
+          },
+          "source": {
+            "objID": "f3b41dcb-7b6a-4a53-80cc-630109bc5e9a",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 71
+          }
+        },
+        {
+          "objID": "e6a94b61-3595-43c1-f4d9-a0627779acad",
+          "encoding": 72,
+          "x": 1,
+          "y": 0,
+          "width": 11,
+          "height": 12,
+          "dx": 12.96002197265625,
+          "glyphBitmap": {
+            "width": 11,
+            "height": 12,
+            "pixelArray": "80ff940000000000a0ff7480ff940000000000a0ff7480ff940000000000a0ff7480ff940000000000a0ff7480ff940000000000a0ff7480ffefd8d8d8d8d8f1ff7480ffffffffffffffffff7480ff940000000000a0ff7480ff940000000000a0ff7480ff940000000000a0ff7480ff940000000000a0ff7480ff940000000000a0ff74"
+          },
+          "source": {
+            "objID": "237be744-b209-46cf-dd74-209bf22838e5",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 72
+          }
+        },
+        {
+          "objID": "eec6ef2d-59e9-4653-a3a8-85366a5fb36f",
+          "encoding": 73,
+          "x": 1,
+          "y": 0,
+          "width": 3,
+          "height": 12,
+          "dx": 5.10400390625,
+          "glyphBitmap": {
+            "width": 3,
+            "height": 12,
+            "pixelArray": "80ff9480ff9480ff9480ff9480ff9480ff9480ff9480ff9480ff9480ff9480ff9480ff94"
+          },
+          "source": {
+            "objID": "01b67eac-0b9d-4703-869a-50d5da1edc65",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 73
+          }
+        },
+        {
+          "objID": "4c5906d8-9f76-4f2e-88d4-a32e6f58d71e",
+          "encoding": 74,
+          "x": -1,
+          "y": 0,
+          "width": 9,
+          "height": 12,
+          "dx": 8.432022094726562,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 12,
+            "pixelArray": "000cffffffffffff080009d4d4d4d6ffff08000000000010ffff08000000000010ffff08000000000010ffff08000000000010ffff08000000000010ffff08000000000010ffff0700050200001ffffb0000949b090082ffce000ce6fff3e7ffff5e00001ca1eafad5630000"
+          },
+          "source": {
+            "objID": "793a4641-276b-4880-b61a-829748341bd5",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 74
+          }
+        },
+        {
+          "objID": "f1173f93-889d-4a4c-808c-fb5d12a49ca5",
+          "encoding": 75,
+          "x": 1,
+          "y": 0,
+          "width": 11,
+          "height": 12,
+          "dx": 11.664016723632812,
+          "glyphBitmap": {
+            "width": 11,
+            "height": 12,
+            "pixelArray": "80ff940000000055fde51d80ff9400000041f8f2300080ff9400002ff1fb46000080ff940020e6ff6200000080ff9414d9ff800000000080ff9fc9ffec090000000080fffdffffff9b0000000080ffffd75cfdff5b00000080ffe01c0079fff328000080ff94000001adffd3090080ff940000000cd5ff9e0080ff940000000025f0ff5f"
+          },
+          "source": {
+            "objID": "9c3cc734-f242-48ba-b69b-7db34565c361",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 75
+          }
+        },
+        {
+          "objID": "5f16a512-fa71-463c-cff0-6e31c191294b",
+          "encoding": 76,
+          "x": 1,
+          "y": 0,
+          "width": 9,
+          "height": 12,
+          "dx": 9.584014892578125,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 12,
+            "pixelArray": "80ff9400000000000080ff9400000000000080ff9400000000000080ff9400000000000080ff9400000000000080ff9400000000000080ff9400000000000080ff9400000000000080ff9400000000000080ff9400000000000080ffedd4d4d4d4d45c80ffffffffffffff70"
+          },
+          "source": {
+            "objID": "d0ae6739-6138-4f2d-d8ad-d0e37b2b98c1",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 76
+          }
+        },
+        {
+          "objID": "795dc4f1-487d-4905-9b97-e5dd9f120996",
+          "encoding": 77,
+          "x": 1,
+          "y": 0,
+          "width": 13,
+          "height": 12,
+          "dx": 15.280029296875,
+          "glyphBitmap": {
+            "width": 13,
+            "height": 12,
+            "pixelArray": "80ff7f000000000000003effc080fff419000000000001caffc080ffff9c000000000058ffffc080fffffd2d00000006ddffffc180ffccffb900000071ffbeffc180ff7cc0ff470010ede945ffc180ff7c31fdd2028aff6837ffc280ff7c009eff82f7d50337ffc280ff7c0018f3ffff4a0036ffc280ff7c00007affba000036ffc380ff7c0000089d2c000035ffc380ff7c0000000000000034ffc3"
+          },
+          "source": {
+            "objID": "06eeb766-4e9a-454d-dad6-db6095572019",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 77
+          }
+        },
+        {
+          "objID": "aa581b42-e875-4894-c23c-75084d8ea0c7",
+          "encoding": 78,
+          "x": 1,
+          "y": 0,
+          "width": 11,
+          "height": 12,
+          "dx": 12.96002197265625,
+          "glyphBitmap": {
+            "width": 11,
+            "height": 12,
+            "pixelArray": "80ff9900000000009cff7480ffff5b000000009cff7480fffff4290000009cff7480fffeffd40a00009cff7480ffa3e2ffa200009cff7480ff9039faff65009cff7480ff900070fff72f9cff7480ff900000adffdbaaff7480ff9000000edbfffeff7480ff9000000030f7ffff7480ff900000000064ffff7480ff900000000000a1ff74"
+          },
+          "source": {
+            "objID": "2fef1e09-19e3-42b0-de5f-e8849360004a",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 78
+          }
+        },
+        {
+          "objID": "9df8cd70-154f-47ea-b8f3-bef07af8eeee",
+          "encoding": 79,
+          "x": 0,
+          "y": 0,
+          "width": 13,
+          "height": 12,
+          "dx": 13.472030639648438,
+          "glyphBitmap": {
+            "width": 13,
+            "height": 12,
+            "pixelArray": "000000228fd9f6e8bb58010000000056f4ffffeefaffffb50d000037faff9c1c000354e8ffa90000c0ff9900000000002bf6ff3719fffb170000000000009cff903dffda0000000000000063ffb43cffda0000000000000063ffb418fffb180000000000009cff9000beff9900000000002af6ff370035f9ff9b1e000554e8ffa800000054f4fffff1fbffffb40c000000002290d9f6e9bb58010000"
+          },
+          "source": {
+            "objID": "57244096-b432-41a5-8d73-5d2f4df0746b",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 79
+          }
+        },
+        {
+          "objID": "991c85ac-1eee-4c1a-d93c-432b12f3cc49",
+          "encoding": 80,
+          "x": 1,
+          "y": 0,
+          "width": 10,
+          "height": 12,
+          "dx": 11.61602783203125,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 12,
+            "pixelArray": "80fffffffff5d47e090080ffefd8d8e9ffffcd0980ff9400000031e2ff7880ff940000000064ffc380ff940000000042ffd880ff940000000073ffbc80ff9400001158f0ff6580ffffffffffffffae0280ffefd8d8ceac56000080ff940000000000000080ff940000000000000080ff9400000000000000"
+          },
+          "source": {
+            "objID": "1f75043f-6c30-44f7-be5d-9aaf38170a91",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 80
+          }
+        },
+        {
+          "objID": "0f3f8b8e-547e-42c8-dc27-1a64b3182bed",
+          "encoding": 81,
+          "x": 0,
+          "y": -3,
+          "width": 14,
+          "height": 15,
+          "dx": 13.472030639648438,
+          "glyphBitmap": {
+            "width": 14,
+            "height": 15,
+            "pixelArray": "000000208dd8f5e7b95400000000000050f2ffffeefaffffaf0a0000002ff7ffa11e000457ecffa1000000b9ffa2000000000031f9ff310015fdfd1d000000000000a3ff8b003affdd0000000000000066ffb10040ffd70000000000000060ffb90021fff80f00000000000091ff980000d2ff7f000000000019eeff4b000052fffb6d03000026cfffc90100000084ffffe7bdcdfdffe01d00000000004fccfffffff4961100000000000000001197ffea490f51a6020000000000000183fdffffffe71c00000000000000002d849d761300"
+          },
+          "source": {
+            "objID": "c6b17e04-e8ec-41ec-a7b1-e296783ccd0a",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 81
+          }
+        },
+        {
+          "objID": "f0073e39-dbc3-4fac-baa2-e6ac289893fc",
+          "encoding": 82,
+          "x": 1,
+          "y": 0,
+          "width": 11,
+          "height": 12,
+          "dx": 11.696029663085938,
+          "glyphBitmap": {
+            "width": 11,
+            "height": 12,
+            "pixelArray": "80fffffffff5d47e09000080ffefd8d8e9ffffcd090080ff9400000031e2ff780080ff940000000064ffc30080ff940000000042ffd80080ff940000000074ffbb0080ff9400001158f0ff610080ffffffffffffffa6010080ffe8c8c8dbffbe00000080ff9400000fe0ff50000080ff940000003efdeb180080ff940000000086ffb801"
+          },
+          "source": {
+            "objID": "6a1c27f4-0cd3-4a8c-f481-8c40ccca3570",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 82
+          }
+        },
+        {
+          "objID": "a41d057f-37a7-4772-dc04-f56c18b128a4",
+          "encoding": 83,
+          "x": 0,
+          "y": 0,
+          "width": 10,
+          "height": 12,
+          "dx": 10.06402587890625,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 12,
+            "pixelArray": "000053bdedfae4a43600007dffffe2d7f8ffdb000ef7fe480000035358002bffea000000000000000df7ffa42c0000000000006afdffffe49e44000000002d8fd8ffffffa70100000000001e82f9ff4d000200000000009dff760ad15d0a00001ddbff5140fefffadadcfcffc40400349cdaf7f5d27b0900"
+          },
+          "source": {
+            "objID": "ee68f45c-bc88-4d87-9c1d-dc676068be66",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 83
+          }
+        },
+        {
+          "objID": "3d5a8e48-3284-463d-e3a6-d75c009d1d2b",
+          "encoding": 84,
+          "x": 0,
+          "y": 0,
+          "width": 10,
+          "height": 12,
+          "dx": 9.63201904296875,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 12,
+            "pixelArray": "f0ffffffffffffffff90cad8d8e0fffad8d8d87900000038ffdc0000000000000038ffdc0000000000000038ffdc0000000000000038ffdc0000000000000038ffdc0000000000000038ffdc0000000000000038ffdc0000000000000038ffdc0000000000000038ffdc0000000000000038ffdc00000000"
+          },
+          "source": {
+            "objID": "51e5d138-9ce3-42ca-de88-dbd95355317f",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 84
+          }
+        },
+        {
+          "objID": "7d3e0a57-15ae-4b99-8e9c-581e2f605580",
+          "encoding": 85,
+          "x": 1,
+          "y": 0,
+          "width": 11,
+          "height": 12,
+          "dx": 12.6240234375,
+          "glyphBitmap": {
+            "width": 11,
+            "height": 12,
+            "pixelArray": "98ff7c0000000000d4ff3898ff7c0000000000d4ff3898ff7c0000000000d4ff3898ff7c0000000000d4ff3898ff7c0000000000d4ff3898ff7c0000000000d4ff3897ff7e0000000000d6ff378aff950000000000efff2960ffd50100000030fff80612f4ff920e0028cdffa500005efdfffef3ffffe21900000040b7eefae093170000"
+          },
+          "source": {
+            "objID": "d15bd0b8-204a-4674-862f-38cb7f243937",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 85
+          }
+        },
+        {
+          "objID": "b333f23c-4650-4096-dca2-253ca677e47f",
+          "encoding": 86,
+          "x": -1,
+          "y": 0,
+          "width": 13,
+          "height": 12,
+          "dx": 11.664016723632812,
+          "glyphBitmap": {
+            "width": 13,
+            "height": 12,
+            "pixelArray": "01deff5f0000000000008cff8b0078ffc6000000000007ecfe240016f9ff2e000000005cffbb000000a7ff9500000000c4ff520000003ffff10b00002bffe50400000000d5ff64000093ff8200000000006effcb000af0fc1d000000000010f5ff3263ffb1000000000000009dff9acbff490000000000000035fff9ffde020000000000000000cdffff7800000000000000000064fff91600000000"
+          },
+          "source": {
+            "objID": "8bf9d45d-57e6-473a-8ab6-80c44dcd06c2",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 86
+          }
+        },
+        {
+          "objID": "19fdc40b-598c-4fe6-be3a-71c95d242bfc",
+          "encoding": 87,
+          "x": 0,
+          "y": 0,
+          "width": 18,
+          "height": 12,
+          "dx": 18.304031372070312,
+          "glyphBitmap": {
+            "width": 18,
+            "height": 12,
+            "pixelArray": "68ffbf0000000001e3ff570000000044ffb81afefb1100000036ffffa60000000094ff6800caff5b00000087fffff005000000e3fe1a007bffa9000000d8fcc6ff45000034ffca00002cfff1050029ffc063ff94000084ff7a000000ddff45007aff6e15fde30000d3ff2b0000008eff9300cbff1e00c3ff3323ffdb000000003fffe01dffcc000073ff8273ff8c0000000003ecff9cff7b000024ffd2c3ff3d0000000000a1fffeff2a000000d4fffdeb03000000000052ffffd90000000084ffff9e0000000000000bf7ff880000000034ffff4f000000"
+          },
+          "source": {
+            "objID": "fc47ee69-11db-4572-a633-63abfab0927a",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 87
+          }
+        },
+        {
+          "objID": "7f3f539a-1aca-46f8-8b5e-90f9237f6c7c",
+          "encoding": 88,
+          "x": 0,
+          "y": 0,
+          "width": 11,
+          "height": 12,
+          "dx": 11.088027954101562,
+          "glyphBitmap": {
+            "width": 11,
+            "height": 12,
+            "pixelArray": "4bfff01c0000000bddff5500a0ffb800000094ffa7000010e5ff640040fee7120000004bfff129ddff4d00000000009ffff3ffa000000000000010e7ffea0f00000000000029f7fffd3b000000000004caffcaffdb0b000000007cffcc06c4ff940000002ffafa2d0025f6fe430006d1ff8000000070ffe10e85ffd20500000002c3ff9d"
+          },
+          "source": {
+            "objID": "51da8b5e-1da6-4940-9cd9-4e23a6a6d761",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 88
+          }
+        },
+        {
+          "objID": "1d7dd4aa-09b5-40d7-b774-050179251644",
+          "encoding": 89,
+          "x": -1,
+          "y": 0,
+          "width": 12,
+          "height": 12,
+          "dx": 10.576019287109375,
+          "glyphBitmap": {
+            "width": 12,
+            "height": 12,
+            "pixelArray": "04d7ff5b00000000009dff6f004cffe10800000030fdd9050000bcff7b000000bfff4f0000002efdf2170050ffbe00000000009cff9a06dbfd31000000000018f3fc9cff9e000000000000007bfffff4190000000000000009e4ff82000000000000000000c0ff58000000000000000000c0ff58000000000000000000c0ff58000000000000000000c0ff5800000000"
+          },
+          "source": {
+            "objID": "7d2f1370-6e9f-4956-bc37-efadef9b359a",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 89
+          }
+        },
+        {
+          "objID": "dd6b474b-9ea9-413c-8343-73d4d410bc24",
+          "encoding": 90,
+          "x": 0,
+          "y": 0,
+          "width": 11,
+          "height": 12,
+          "dx": 10.608016967773438,
+          "glyphBitmap": {
+            "width": 11,
+            "height": 12,
+            "pixelArray": "3cffffffffffffffffff0032d8d8d8d8d8d8f8ffe30000000000000042fdfb3a00000000000019e8ff7300000000000003c0ffb00000000000000086ffdf1000000000000049fef9350000000000001decff6d00000000000004c6ffaa000000000000008dffdb0e0000000000003bffffe8d4d4d4d4d4d42b58ffffffffffffffffff34"
+          },
+          "source": {
+            "objID": "0efc1237-72b4-4d50-d430-60eda2ad4ef9",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 90
+          }
+        },
+        {
+          "objID": "029c59c0-bcfe-4d33-ddf1-23feccf9cc5e",
+          "encoding": 91,
+          "x": 1,
+          "y": -3,
+          "width": 5,
+          "height": 15,
+          "dx": 5.600006103515625,
+          "glyphBitmap": {
+            "width": 5,
+            "height": 15,
+            "pixelArray": "80ffffff5480ffd4a83780ff80000080ff80000080ff80000080ff80000080ff80000080ff80000080ff80000080ff80000080ff80000080ff80000080ff80000080ffd6ac3880ffffff54"
+          },
+          "source": {
+            "objID": "8e9a15a7-899f-431e-f768-61101fa11c25",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 91
+          }
+        },
+        {
+          "objID": "c9cb229a-cef6-4f82-e1c9-2961fe8847a9",
+          "encoding": 92,
+          "x": -1,
+          "y": -2,
+          "width": 8,
+          "height": 16,
+          "dx": 5.936004638671875,
+          "glyphBitmap": {
+            "width": 8,
+            "height": 16,
+            "pixelArray": "47801e00000000004dff7e000000000006efd50000000000009eff2d000000000047ff84000000000004ecdb00000000000099ff32000000000042ff8a000000000002e7e000000000000093ff3800000000003cff8f000000000001e3e40200000000008dff3e000000000036ff95000000000000dee903000000000088ff44"
+          },
+          "source": {
+            "objID": "33152723-61f4-48bb-e108-2b646c408aab",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 92
+          }
+        },
+        {
+          "objID": "e7e001b3-8667-42e0-bd27-6b3fbabfd8f2",
+          "encoding": 93,
+          "x": 0,
+          "y": -3,
+          "width": 5,
+          "height": 15,
+          "dx": 5.600006103515625,
+          "glyphBitmap": {
+            "width": 5,
+            "height": 15,
+            "pixelArray": "bcffffff147ba8f9ff140000ecff140000ecff140000ecff140000ecff140000ecff140000ecff140000ecff140000ecff140000ecff140000ecff140000ecff147eacf9ff14bcffffff14"
+          },
+          "source": {
+            "objID": "47bcfb9a-58c0-44f9-8f53-c926eaaedc6b",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 93
+          }
+        },
+        {
+          "objID": "090f23c8-ab0a-4a4a-cdd7-50df50478737",
+          "encoding": 94,
+          "x": 1,
+          "y": 2,
+          "width": 8,
+          "height": 7,
+          "dx": 9.456024169921875,
+          "glyphBitmap": {
+            "width": 8,
+            "height": 7,
+            "pixelArray": "000048ffc00000000000b1f5ff290000001dfc6dea9100000082f40d8cef0a0004e69d0028ff620053ff370000c3ca00bcd20000005eff33"
+          },
+          "source": {
+            "objID": "0f273b2c-24f5-465f-86a1-f7211ccd46d4",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 94
+          }
+        },
+        {
+          "objID": "a586026c-b5bc-412f-a9a5-d81e6571ea93",
+          "encoding": 95,
+          "x": 0,
+          "y": -2,
+          "width": 8,
+          "height": 3,
+          "dx": 8.000015258789062,
+          "glyphBitmap": {
+            "width": 8,
+            "height": 3,
+            "pixelArray": "0c0c0c0c0c0c0c0cffffffffffffffff3838383838383838"
+          },
+          "source": {
+            "objID": "810d2c30-87f9-4b49-e737-ff598a1c527f",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 95
+          }
+        },
+        {
+          "objID": "1e8102e8-29ab-4a3d-a1f7-45d2e0ac92d3",
+          "encoding": 96,
+          "x": 1,
+          "y": 10,
+          "width": 6,
+          "height": 3,
+          "dx": 9.600021362304688,
+          "glyphBitmap": {
+            "width": 6,
+            "height": 3,
+            "pixelArray": "107c7f190000004cf5cd0b00000037ebb202"
+          },
+          "source": {
+            "objID": "9a4fb3ae-5a52-4dde-fd16-cf21ee8399e7",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 96
+          }
+        },
+        {
+          "objID": "278d164c-8eff-48a0-9f3b-415fe28515e3",
+          "encoding": 97,
+          "x": 0,
+          "y": 0,
+          "width": 9,
+          "height": 9,
+          "dx": 9.712020874023438,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 9,
+            "pixelArray": "003eade7f9de99160000d4ffe2c6f2ffcc03004139000015e1ff440000000417189fff6b0047d1fdffffffff7816f6f46e4a48a9ff7841ffba000000b1ff7813f2fc9070b5feff78003ac5f7f2b18aff78"
+          },
+          "source": {
+            "objID": "1bc2053c-3b59-4a5a-b9cf-2ec0b349cee3",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 97
+          }
+        },
+        {
+          "objID": "35e642e3-52ec-4d61-e060-3514a62b91ba",
+          "encoding": 98,
+          "x": 1,
+          "y": 0,
+          "width": 10,
+          "height": 12,
+          "dx": 10.976028442382812,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 12,
+            "pixelArray": "b0ff5000000000000000b0ff5000000000000000b0ff5000000000000000b0ff6ba9f0f2be420000b0fffbfdd0e5fffd5600b0ffeb2e000179ffec07b0ff7500000000d5ff44b0ff4e00000000aeff5cb0ff7500000000d6ff44b0ffea2e00017dffed07b0fff7fdd3e8fffe5900b0ff57adf1f2c0460000"
+          },
+          "source": {
+            "objID": "460e31d6-33f1-432d-dbef-5f5ed0b32e35",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 98
+          }
+        },
+        {
+          "objID": "abe097fe-3fe2-4293-8160-e7960871549b",
+          "encoding": 99,
+          "x": 0,
+          "y": 0,
+          "width": 9,
+          "height": 9,
+          "dx": 9.2960205078125,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 9,
+            "pixelArray": "000030aceaf6cf63000046f8ffe6cffdff7d05e6ff7901002dc44742ffd10000000000005cffaa00000000000042ffd100000000000005e7ff7701002dc74a0049faffe8d2fdff78000033aeebf6cf6100"
+          },
+          "source": {
+            "objID": "4c85bc66-9e13-40d5-a5d3-47fbed578b91",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 99
+          }
+        },
+        {
+          "objID": "02b25784-c40b-4c9f-f36b-39da2fb1b079",
+          "encoding": 100,
+          "x": 0,
+          "y": 0,
+          "width": 10,
+          "height": 12,
+          "dx": 10.992019653320312,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 12,
+            "pixelArray": "0000000000000050ffb00000000000000050ffb00000000000000050ffb0000043bef2f0a96bffb00057fdffe1d0fdfaffb007edff7300002feeffb045ffd0000000007affb05dffa6000000004fffb045ffc70000000071ffb008eeff5700001de3ffb0005afeffc9b7f4fcffb0000046c1f3f2b263ffb0"
+          },
+          "source": {
+            "objID": "88fa7f77-e76a-4584-9e35-e45e538573e3",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 100
+          }
+        },
+        {
+          "objID": "f0514a21-7bc2-4736-8aaf-5076e9bfbd45",
+          "encoding": 101,
+          "x": 0,
+          "y": 0,
+          "width": 10,
+          "height": 9,
+          "dx": 9.9520263671875,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 9,
+            "pixelArray": "00003bb7eff0b73700000050fbfec4c1fdfa450006eafc46000040fade0144ffc018181818b8ff335cffffffffffffffff5043ffd14848484848481606e9fc5d000008720b00004bfaffe4cef4ff8700000034ade9f9dc850a00"
+          },
+          "source": {
+            "objID": "46d49fef-5c41-40d4-9bc5-f6e66e00d34f",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 101
+          }
+        },
+        {
+          "objID": "816447a9-ef29-43ae-8d0d-f8fff9b2bc3d",
+          "encoding": 102,
+          "x": 0,
+          "y": 0,
+          "width": 7,
+          "height": 12,
+          "dx": 5.9040069580078125,
+          "glyphBitmap": {
+            "width": 7,
+            "height": 12,
+            "pixelArray": "000055d2f6e13a002cfcfabcd5140065ff91000000d4ffffffffe0008bcdffdaa89300006cff94000000006cff94000000006cff94000000006cff94000000006cff94000000006cff94000000006cff94000000"
+          },
+          "source": {
+            "objID": "8fbe880a-2ce6-43ec-e053-68fab8dd7d1d",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 102
+          }
+        },
+        {
+          "objID": "8326022c-9fe8-44b4-8dce-b88c156d237a",
+          "encoding": 103,
+          "x": 0,
+          "y": -3,
+          "width": 10,
+          "height": 12,
+          "dx": 11.104019165039062,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 12,
+            "pixelArray": "000041bdf2f1af43ffcc0058fdffe7d3fbf5ffcc08eeff79010028e2ffcc46ffd2000000005fffcc5dffaa0000000036ffcc44ffd20000000060ffcc07edff77010026e0ffcc0055fdffe6d2fafaffc8000041bdf3f2b069ffb20019300000000bb0ff7200b5ffedd2cff3ffd90d001c8cd2f5fade931400"
+          },
+          "source": {
+            "objID": "b0314f36-6ab6-4838-9fc1-b2da1b7f1508",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 103
+          }
+        },
+        {
+          "objID": "445059ad-53ba-4279-ede8-0a93b95264d5",
+          "encoding": 104,
+          "x": 1,
+          "y": 0,
+          "width": 9,
+          "height": 12,
+          "dx": 10.96002197265625,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 12,
+            "pixelArray": "b0ff50000000000000b0ff50000000000000b0ff50000000000000b0ff71aceff0bc3100b0fffdfdddf3fff31bb0ffe82a000dc5ff85b0ff7a0000005bffacb0ff5400000044ffbcb0ff5000000044ffbcb0ff5000000044ffbcb0ff5000000044ffbcb0ff5000000044ffbc"
+          },
+          "source": {
+            "objID": "0a807346-f806-485c-b3bd-52c157d2818a",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 104
+          }
+        },
+        {
+          "objID": "b8091782-337f-4450-c898-7e8ffe5ceb54",
+          "encoding": 105,
+          "x": 1,
+          "y": 0,
+          "width": 3,
+          "height": 13,
+          "dx": 4.6240081787109375,
+          "glyphBitmap": {
+            "width": 3,
+            "height": 13,
+            "pixelArray": "32710ee1ff869cf047000000b0ff50b0ff50b0ff50b0ff50b0ff50b0ff50b0ff50b0ff50b0ff50"
+          },
+          "source": {
+            "objID": "80d4c6d4-bd15-40c7-a149-f49f3ed454a0",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 105
+          }
+        },
+        {
+          "objID": "58bb6d9e-eaf0-48ff-b310-a2e77cb2889c",
+          "encoding": 106,
+          "x": -2,
+          "y": -3,
+          "width": 6,
+          "height": 16,
+          "dx": 4.7200164794921875,
+          "glyphBitmap": {
+            "width": 6,
+            "height": 16,
+            "pixelArray": "000000297316000000cdff9e00000089f35900000000000000000098ff6800000098ff6800000098ff6800000098ff6800000098ff6800000098ff6800000098ff6800000098ff6800000098ff67000000b6ff501fdac5fff0143fdff6cd3e00"
+          },
+          "source": {
+            "objID": "ce24d4eb-de6f-4f39-81bf-1ad27b663513",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 106
+          }
+        },
+        {
+          "objID": "a3e50ed3-99b3-421c-dd5b-24831efc2ccc",
+          "encoding": 107,
+          "x": 1,
+          "y": 0,
+          "width": 10,
+          "height": 12,
+          "dx": 10.176025390625,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 12,
+            "pixelArray": "b0ff5000000000000000b0ff5000000000000000b0ff5000000000000000b0ff50000028e6fe6300b0ff50002be8ff700000b0ff502febff7e000000b0ff83edff9600000000b0ffffffffca06000000b0ffff7fdfff91000000b0ff820033f8ff500000b0ff50000065ffef2000b0ff500000009fffca06"
+          },
+          "source": {
+            "objID": "67c9c295-e4e6-44b1-974b-9d66ac7ad88c",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 107
+          }
+        },
+        {
+          "objID": "7b0bbade-f113-4097-b574-c690ddb2833a",
+          "encoding": 108,
+          "x": 1,
+          "y": 0,
+          "width": 3,
+          "height": 12,
+          "dx": 4.6240081787109375,
+          "glyphBitmap": {
+            "width": 3,
+            "height": 12,
+            "pixelArray": "b0ff50b0ff50b0ff50b0ff50b0ff50b0ff50b0ff50b0ff50b0ff50b0ff50b0ff50b0ff50"
+          },
+          "source": {
+            "objID": "a7ffae82-959c-4521-ffa3-9758924c955a",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 108
+          }
+        },
+        {
+          "objID": "5082837f-4257-4178-8e28-645e7b22e39a",
+          "encoding": 109,
+          "x": 1,
+          "y": 0,
+          "width": 15,
+          "height": 9,
+          "dx": 16.848037719726562,
+          "glyphBitmap": {
+            "width": 15,
+            "height": 9,
+            "pixelArray": "b0ff56b0f3f3b32530b2f0edb52700b0fffcf0c4eeffe6f5f6c6e6ffe60cb0ffda150016eafff126000bd2ff64b0ff710000009fff960000007bff89b0ff520000008cff7600000068ff98b0ff500000008cff7400000068ff98b0ff500000008cff7400000068ff98b0ff500000008cff7400000068ff98b0ff500000008cff7400000068ff98"
+          },
+          "source": {
+            "objID": "b1d4e4eb-4472-43a3-e754-8f12ff2ffa53",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 109
+          }
+        },
+        {
+          "objID": "ee6aeafc-6586-4eae-a6a6-32bf67b55d23",
+          "encoding": 110,
+          "x": 1,
+          "y": 0,
+          "width": 9,
+          "height": 9,
+          "dx": 10.96002197265625,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 9,
+            "pixelArray": "b0ff5fafeff0bc3100b0fffcf4c5e3fff31bb0ffe01b0006baff85b0ff7500000058ffacb0ff5300000044ffbcb0ff5000000044ffbcb0ff5000000044ffbcb0ff5000000044ffbcb0ff5000000044ffbc"
+          },
+          "source": {
+            "objID": "12878a55-25d4-4c87-86fc-e53102bdfa2d",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 110
+          }
+        },
+        {
+          "objID": "bf84da43-522e-47da-df91-d6c3aeb86bc3",
+          "encoding": 111,
+          "x": 0,
+          "y": 0,
+          "width": 10,
+          "height": 9,
+          "dx": 10.320022583007812,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 9,
+            "pixelArray": "000034b0ecf4ca600000004afaffe4d5fdff940006e8ff72000035f0ff3f43ffd0000000007fff965cffaa0000000057ffb043ffd10000000080ff9506e9ff76000038f1ff40004cfbffe7d9fdff9800000037b3edf5cc640000"
+          },
+          "source": {
+            "objID": "def26ec3-9b90-4674-d229-eb49f8fd1a73",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 111
+          }
+        },
+        {
+          "objID": "58dda1a0-4ce7-4346-dc99-826360ab8546",
+          "encoding": 112,
+          "x": 1,
+          "y": -3,
+          "width": 10,
+          "height": 12,
+          "dx": 10.976028442382812,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 12,
+            "pixelArray": "b0ff5eb1f2f2be420000b0fffbf6b8cffffd5600b0ffe41f000066ffec07b0ff7000000000d1ff44b0ff4e00000000aeff5cb0ff7700000001d8ff44b0ffec2f000180ffed07b0fffafdd3e9fffe5900b0ff6baaf2f2c0460000b0ff5000000000000000b0ff5000000000000000b0ff5000000000000000"
+          },
+          "source": {
+            "objID": "89ad4ae9-877d-4ccc-a1f6-b4736ebd8703",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 112
+          }
+        },
+        {
+          "objID": "834f1057-8239-4cce-ab3a-770933b3e1b7",
+          "encoding": 113,
+          "x": 0,
+          "y": -3,
+          "width": 10,
+          "height": 12,
+          "dx": 10.976028442382812,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 12,
+            "pixelArray": "000044bff2f0a758ffa80057fdffe4d5fdf6ffa807edff72000035f0ffa845ffd0000000007fffa85dffaa0000000057ffa846ffd10000000080ffa809f1ff76000038f1ffa8005ffeffe7d9fdfaffa8000049c1f3f1a76fffa80000000000000058ffa80000000000000058ffa80000000000000058ffa8"
+          },
+          "source": {
+            "objID": "bce7d119-40e5-4c91-cbf2-0b216ac86eb2",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 113
+          }
+        },
+        {
+          "objID": "1f9a099f-5d5c-4dc0-ea51-8037eb4775c1",
+          "encoding": 114,
+          "x": 1,
+          "y": 0,
+          "width": 6,
+          "height": 9,
+          "dx": 6.7200164794921875,
+          "glyphBitmap": {
+            "width": 6,
+            "height": 9,
+            "pixelArray": "b0ff51a6ec3fb0ffeefffa3eb0fff34c0400b0ff87000000b0ff58000000b0ff50000000b0ff50000000b0ff50000000b0ff50000000"
+          },
+          "source": {
+            "objID": "453d84a1-7c8c-4f0c-bbb7-f29334dbb173",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 114
+          }
+        },
+        {
+          "objID": "9e1895ea-9381-429d-e548-cc6c5035b187",
+          "encoding": 115,
+          "x": 0,
+          "y": 0,
+          "width": 8,
+          "height": 9,
+          "dx": 8.240020751953125,
+          "glyphBitmap": {
+            "width": 8,
+            "height": 9,
+            "pixelArray": "002ba9e5f7dba92f19f0ffcdb8dbff305effa70000002a0042ffec7d420f0000008cfafffffcb81a00000f4677cbffa9065a05000039ffca69ffeec5b8efff762092d8f8f0ca6200"
+          },
+          "source": {
+            "objID": "9be3d1fd-a4d4-4c2a-9651-a9c58b248d34",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 115
+          }
+        },
+        {
+          "objID": "a6b6950f-f588-40e0-c13f-3d565a48210a",
+          "encoding": 116,
+          "x": 0,
+          "y": 0,
+          "width": 7,
+          "height": 11,
+          "dx": 6.7840118408203125,
+          "glyphBitmap": {
+            "width": 7,
+            "height": 11,
+            "pixelArray": "006cff94000000006cff94000000d4ffffffffe0008bcdffdaa89300006cff94000000006cff94000000006cff94000000006bff940000000058ffb1000100001df7ffc5dd1d00004dd3f7d735"
+          },
+          "source": {
+            "objID": "cd2a8d55-f22e-4abb-9b9c-1604e23859a6",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 116
+          }
+        },
+        {
+          "objID": "5c522b17-5892-4c95-f2ef-ccccc171a6bc",
+          "encoding": 117,
+          "x": 1,
+          "y": 0,
+          "width": 9,
+          "height": 9,
+          "dx": 10.896026611328125,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 9,
+            "pixelArray": "c0ff400000006cff94c0ff400000006cff94c0ff400000006cff94c0ff400000006cff94c0ff400000006fff94b0ff5300000091ff9489ffb2030025efff941ef5ffdfc6f7fdff940032bbeef1ad70ff94"
+          },
+          "source": {
+            "objID": "8b2d81bf-fc5b-4078-f02c-d0ef0b8ebf42",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 117
+          }
+        },
+        {
+          "objID": "5634a4c4-fb9d-4ac1-b1e3-ac1b6638228e",
+          "encoding": 118,
+          "x": -1,
+          "y": 0,
+          "width": 11,
+          "height": 9,
+          "dx": 9.248016357421875,
+          "glyphBitmap": {
+            "width": 11,
+            "height": 9,
+            "pixelArray": "01deff3200000000d0fd1e0078ff9800000039ffb3000016f9f20b0000a2ff4a000000a8ff640013f7df0200000040ffca0074ff790000000000d7ff31dbfa16000000000070ffd1ffa800000000000011f6ffff4000000000000000a0ffd700000000"
+          },
+          "source": {
+            "objID": "122f61e6-848d-4940-9b19-9506c76d4f8d",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 118
+          }
+        },
+        {
+          "objID": "f183177e-9d8c-4bd7-93bf-41f1cfd47835",
+          "encoding": 119,
+          "x": 0,
+          "y": 0,
+          "width": 15,
+          "height": 9,
+          "dx": 14.704025268554688,
+          "glyphBitmap": {
+            "width": 15,
+            "height": 9,
+            "pixelArray": "c3ff1f0000009dff6800000050ff776aff75000007f0ffc0000000a9fe1e15fbcc000053fffcfd1b000cf6c30000b7ff2300aefe81ff72005bff6900005eff7910f8be10f8ca00b3fb1400000df7d064ff6200aeff36fab600000000abffdbf70e0053ffd8ff5c0000000052ffffaa000007f0fff50c0000000008f1ff4e0000009dffa8000000"
+          },
+          "source": {
+            "objID": "f0e48041-63d2-4edf-c545-7a6dcd32b7e5",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 119
+          }
+        },
+        {
+          "objID": "99714ef6-154e-4e88-dda4-79534b04b493",
+          "encoding": 120,
+          "x": 0,
+          "y": 0,
+          "width": 10,
+          "height": 9,
+          "dx": 9.168014526367188,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 9,
+            "pixelArray": "5cffd5080000a6ff7e0000a5ff94005dffc10200000edeff6af1ed1c0000000039fbffff50000000000000b7ffd60100000000004ffffdff74000000001cedf63fe9fa35000003c1ff6a004dffdc0d007fffb50000009affa500"
+          },
+          "source": {
+            "objID": "05db2cde-fe26-4100-d0ed-4edcccbdd8af",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 120
+          }
+        },
+        {
+          "objID": "cdb9a7f9-29db-40d5-b1ac-516d30078029",
+          "encoding": 121,
+          "x": -1,
+          "y": -3,
+          "width": 11,
+          "height": 12,
+          "dx": 9.248016357421875,
+          "glyphBitmap": {
+            "width": 11,
+            "height": 12,
+            "pixelArray": "01dbff3500000000d1fc1d0070ffa00000003effac00000ff4f7130000aaff3f00000096ff76001afbd2000000002affdf0281ff660000000000bcff52e7ee0a00000000004effecff8d00000000000002defffd22000000000000007cffb300000000001d0002beff430000000007e1d7d9ffbc00000000000fa2ebefa7110000000000"
+          },
+          "source": {
+            "objID": "cd211aa4-c51d-4c3a-dbbf-12873b8fea94",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 121
+          }
+        },
+        {
+          "objID": "cad7d6af-27a9-4178-b82f-e399a9e9005a",
+          "encoding": 122,
+          "x": 0,
+          "y": 0,
+          "width": 8,
+          "height": 9,
+          "dx": 8.51202392578125,
+          "glyphBitmap": {
+            "width": 8,
+            "height": 9,
+            "pixelArray": "4cffffffffffffdc33acacacacf1ffae000000005affde120000002cf5f6300000000fdaff5f00000001b0ff96000000007affc70600000039fdffc3acacaca964fffffffffffffc"
+          },
+          "source": {
+            "objID": "ff226c17-7861-4944-e67d-43cedc1ed286",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 122
+          }
+        },
+        {
+          "objID": "00ddd498-24b6-4580-93e3-3bb662b2fdff",
+          "encoding": 123,
+          "x": 0,
+          "y": -3,
+          "width": 6,
+          "height": 15,
+          "dx": 5.920013427734375,
+          "glyphBitmap": {
+            "width": 6,
+            "height": 15,
+            "pixelArray": "000020baf3a40000aeffe16d0000dbff31000000e0ff20000000e0ff20000000e7ff1e0016c3ffe3060020ffffae00000011f2ff16000000e0ff20000000e0ff20000000e0ff20000000d6ff370000009fffe570000017b2f2a4"
+          },
+          "source": {
+            "objID": "f1ca6734-8ef5-4cd5-b6bc-e88cb61e6e0e",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 123
+          }
+        },
+        {
+          "objID": "1b44fff6-f09c-47f0-fd8b-2a503dc81530",
+          "encoding": 124,
+          "x": 1,
+          "y": -3,
+          "width": 3,
+          "height": 15,
+          "dx": 4.8480072021484375,
+          "glyphBitmap": {
+            "width": 3,
+            "height": 15,
+            "pixelArray": "80ff5880ff5880ff5880ff5880ff5880ff5880ff5880ff5880ff5880ff5880ff5880ff5880ff5880ff5880ff58"
+          },
+          "source": {
+            "objID": "002d36b5-3d69-4e7a-e6c2-284eb5f218ff",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 124
+          }
+        },
+        {
+          "objID": "47a97cf0-3710-4a91-beb7-5a8471a7e8b3",
+          "encoding": 125,
+          "x": 0,
+          "y": -3,
+          "width": 6,
+          "height": 15,
+          "dx": 5.920013427734375,
+          "glyphBitmap": {
+            "width": 6,
+            "height": 15,
+            "pixelArray": "bcf1b21700007ee6ff9c00000042ffcb00000030ffd000000030ffd00000002effd60000000eedfebe0b0002c0ffff100028ffe60d000030ffd000000030ffd000000030ffd000000047ffc5000081e9ff8d0000bcefa8100000"
+          },
+          "source": {
+            "objID": "dfdd8b3c-2bbb-4221-9e44-2975c9b08104",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 125
+          }
+        },
+        {
+          "objID": "9649ab06-9d9d-45a4-e2fe-02b0a38b25c2",
+          "encoding": 126,
+          "x": 0,
+          "y": 4,
+          "width": 9,
+          "height": 4,
+          "dx": 9.440017700195312,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 4,
+            "pixelArray": "0008707c2300006c4f00abfffff66f38f16a09fe791898fdffdc0f094c0e00001e3e0b00"
+          },
+          "source": {
+            "objID": "118bc36a-650f-4bc8-a961-b7daa3af1950",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 126
+          }
+        },
+        {
+          "objID": "45d4abd7-d106-4b9c-aec6-bc3a2e37f853",
+          "encoding": 160,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "dx": 4.416015625,
+          "glyphBitmap": {
+            "width": 0,
+            "height": 0,
+            "pixelArray": ""
+          },
+          "source": {
+            "objID": "a516f110-593a-4721-d21f-ed48bc9aa370",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 160
+          }
+        },
+        {
+          "objID": "3f09bd1d-5a1c-4e74-ddd2-af936fb21ba0",
+          "encoding": 161,
+          "x": 0,
+          "y": -3,
+          "width": 4,
+          "height": 12,
+          "dx": 4.4480133056640625,
+          "glyphBitmap": {
+            "width": 4,
+            "height": 12,
+            "pixelArray": "00b1eb3505f9ff6f004a7c0c000000000096ff0e00a3ff1b00b0ff2800bcff3500c9ff4200d6ff5000e2ff5d008c983d"
+          },
+          "source": {
+            "objID": "8f0131a3-940e-4d3e-c8b4-cc579fc3e60e",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 161
+          }
+        },
+        {
+          "objID": "44d52aa9-1cbf-4951-a061-2adb19e0af3b",
+          "encoding": 162,
+          "x": 0,
+          "y": -2,
+          "width": 9,
+          "height": 13,
+          "dx": 9.2960205078125,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 13,
+            "pixelArray": "000000007eae000000000000008cc0000000000032aef3fdd060000049f8fffaf7feff7c06e7ff738dc032cd4a42ffd1008cc00000005dffa7008cc000000047ffc9008cc00000000af0ff588cc020b434005dfefff0f1f7ff8f00004ccdfeffec8003000000008ec4010000000000008cc0000000"
+          },
+          "source": {
+            "objID": "f75efb31-8a4b-4041-f6c9-9a5f2144271f",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 162
+          }
+        },
+        {
+          "objID": "4ad99c86-fed1-4745-a065-48ca6546e2cb",
+          "encoding": 163,
+          "x": 0,
+          "y": 0,
+          "width": 11,
+          "height": 12,
+          "dx": 10.51202392578125,
+          "glyphBitmap": {
+            "width": 11,
+            "height": 12,
+            "pixelArray": "000000005cc2eef4d88b1100000099fffff7f3fff70f000048fff35102002162000000a3ff850000000000000000caff4c0000000000000a14dbff4b14141405000084ffffffffffffff4800002344e2ff704444441300000000d8ff3c0000000000000000d8ff3c0000000000006bd0f8ffdbd0d0d0d0d00384ffffffffffffffffff04"
+          },
+          "source": {
+            "objID": "575ad62d-e4d9-4eb1-a8f8-9e55dca3ff7c",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 163
+          }
+        },
+        {
+          "objID": "e1db1ccd-9e8b-4e2e-a89c-e266e79b345a",
+          "encoding": 164,
+          "x": 0,
+          "y": -1,
+          "width": 11,
+          "height": 12,
+          "dx": 11.200027465820312,
+          "glyphBitmap": {
+            "width": 11,
+            "height": 12,
+            "pixelArray": "00600600000000000061054fffae2181a58c3185ff7e03a9ffffffffffffffcc0f001effec460830c7ff5200007aff3d00000013f2b20000a1f40000000000bdd900008cfe1800000001dec4000037ffbe0b000187ff6f000050fdffeab8deffff7b003ef9ec76d1f6dd82d5ff6614c831000000000019c92c0000000000000000000000"
+          },
+          "source": {
+            "objID": "00b6ad35-d8c5-4e0a-e2a8-7daff39569be",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 164
+          }
+        },
+        {
+          "objID": "a64081ed-d6d3-476a-e35e-0b46bb63fa96",
+          "encoding": 165,
+          "x": -1,
+          "y": 0,
+          "width": 13,
+          "height": 12,
+          "dx": 11.536026000976562,
+          "glyphBitmap": {
+            "width": 13,
+            "height": 12,
+            "pixelArray": "04d1ff5f000000000000baff600039feea120000000059ffc00000009aff9c0000000fe7f92900000011eafe3b000095ff8400000000005effd40535fddd08000000000000bfff7bcdff470000000000000028f9ffffa900000000000072fcfcfffffffdfcfc00000000132c2c64ffd82c2c2c0000000072fcfcfdfffffcfcfc00000000132c2c64ffd82c2c2c0000000000000044ffd00000000000"
+          },
+          "source": {
+            "objID": "07345c25-596c-4457-fcc2-97603c8fc2e6",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 165
+          }
+        },
+        {
+          "objID": "d8780f88-01dd-4b4b-a1c4-6ebb5e0f8282",
+          "encoding": 166,
+          "x": 1,
+          "y": -3,
+          "width": 3,
+          "height": 15,
+          "dx": 4.8480072021484375,
+          "glyphBitmap": {
+            "width": 3,
+            "height": 15,
+            "pixelArray": "80ff5880ff5880ff5880ff5880ff586ad4480000000000000000006ad44880ff5880ff5880ff5880ff5880ff58"
+          },
+          "source": {
+            "objID": "1dd7a1c1-5abb-487e-aeba-b1384a17a555",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 166
+          }
+        },
+        {
+          "objID": "d2b02353-c5ac-4ac0-aa19-1bb63d2ef089",
+          "encoding": 167,
+          "x": 0,
+          "y": -2,
+          "width": 8,
+          "height": 14,
+          "dx": 8.176010131835938,
+          "glyphBitmap": {
+            "width": 8,
+            "height": 14,
+            "pixelArray": "000e84daf6e5ba4e00bdffc69fb7f38218ffc0000000101309fbeb4c050000000099fffff2ad3c0028f5da75b4fcfb3d72ff4d000044ff9a5cffbb2c0048ff8d07b5ffffe6fae11a0000317cc8ffe30e000000000095ff4534af39081ac0ff3069ffffffffff9f00002b739286430000"
+          },
+          "source": {
+            "objID": "b15e8c1e-07fd-41a8-a536-96009da43007",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 167
+          }
+        },
+        {
+          "objID": "00b40a2d-603f-4b58-e124-eb8fbc41add1",
+          "encoding": 168,
+          "x": 2,
+          "y": 10,
+          "width": 6,
+          "height": 3,
+          "dx": 9.600021362304688,
+          "glyphBitmap": {
+            "width": 6,
+            "height": 3,
+            "pixelArray": "00000000000086ea156bf12883e61469ee27"
+          },
+          "source": {
+            "objID": "cd4875a4-f3ef-47cb-c65b-afbf58dacda6",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 168
+          }
+        },
+        {
+          "objID": "c302285f-275c-4113-84ec-8a6e3964e807",
+          "encoding": 169,
+          "x": 0,
+          "y": 0,
+          "width": 12,
+          "height": 12,
+          "dx": 12.704025268554688,
+          "glyphBitmap": {
+            "width": 12,
+            "height": 12,
+            "pixelArray": "0000002798d6e6cd7c11000000005ada6211011e7fda2f000037d41600021402003eda0f00c13a007cefffec6800887919d5006bff9d58a3be0824ce3daa00c8ce000000000001ea3daa00cfc0000000000001e91ad50088fe6d287293082aca00c33c09b1ffffff97009271003ad61600244522004bd60b00005edb5f10012188d828000000002b9cd8e6cc7a0f0000"
+          },
+          "source": {
+            "objID": "f054ff6e-35a9-45ee-ef91-4b288b8eb5a9",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 169
+          }
+        },
+        {
+          "objID": "787d7e94-0766-4d93-dbd1-796b40fc548e",
+          "encoding": 170,
+          "x": 0,
+          "y": 7,
+          "width": 6,
+          "height": 5,
+          "dx": 6.52801513671875,
+          "glyphBitmap": {
+            "width": 6,
+            "height": 5,
+            "pixelArray": "17aeebf1b00e035e1f30f07615aed4d0f79369f00d17e59419bce3c2cc8a"
+          },
+          "source": {
+            "objID": "be8d0978-df55-4788-dc48-569710e37277",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 170
+          }
+        },
+        {
+          "objID": "0efba35d-c726-4de1-99f2-ea1907b8cd94",
+          "encoding": 171,
+          "x": 0,
+          "y": 1,
+          "width": 9,
+          "height": 7,
+          "dx": 8.560012817382812,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 7,
+            "pixelArray": "0000197444006769010001baf42367ff6c00006eff6825f4bb010021f7c000c5f81d000005cdec197fff5a00000028f6b604c7ef1b0000006aff6723f3ba01"
+          },
+          "source": {
+            "objID": "1e994c7f-92b3-4d0e-f7c1-b697367d80af",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 171
+          }
+        },
+        {
+          "objID": "7401a5da-af29-45d5-b3ce-c9062aab3eb0",
+          "encoding": 172,
+          "x": 1,
+          "y": 2,
+          "width": 8,
+          "height": 5,
+          "dx": 9.440017700195312,
+          "glyphBitmap": {
+            "width": 8,
+            "height": 5,
+            "pixelArray": "a3acacacacacac48f4ffffffffffff6c00000000004cff6c00000000004cff6c00000000004cff6c"
+          },
+          "source": {
+            "objID": "0a15b556-4cb4-4a5c-ae8b-4b432cddba63",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 172
+          }
+        },
+        {
+          "objID": "eee38950-2c13-4b3e-fb84-1912d9f132ad",
+          "encoding": 173,
+          "x": 0,
+          "y": 4,
+          "width": 6,
+          "height": 2,
+          "dx": 6.1600189208984375,
+          "glyphBitmap": {
+            "width": 6,
+            "height": 2,
+            "pixelArray": "17bcbcbcbc3420ffffffff48"
+          },
+          "source": {
+            "objID": "a1d11b9d-39ab-4e5f-8091-c0dd2cc0560b",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 173
+          }
+        },
+        {
+          "objID": "421b0dc9-48eb-42b2-fa44-ef3c558c05f9",
+          "encoding": 174,
+          "x": 0,
+          "y": 0,
+          "width": 12,
+          "height": 12,
+          "dx": 12.704025268554688,
+          "glyphBitmap": {
+            "width": 12,
+            "height": 12,
+            "pixelArray": "0000002798d6e6cd7c11000000005ada6211011e7fda2f000037d41600000000003eda0f00c13a03f8f8f5d65d00887919d50004ff722b77fd2124ce3daa0004ff58004aff3001ea3daa0004fffafaff950001e91ad50004ff7532ee5a002aca00c33c04ff5c006ce50c9271003ad617441800034361d60b00005edb5f10012188d828000000002b9cd8e6cc7a0f0000"
+          },
+          "source": {
+            "objID": "b0d7f82c-37b6-4217-e701-d2b6da3ccf84",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 174
+          }
+        },
+        {
+          "objID": "bf93b6ab-e1e6-46a7-b117-f372533df36b",
+          "encoding": 175,
+          "x": 2,
+          "y": 10,
+          "width": 6,
+          "height": 3,
+          "dx": 9.600021362304688,
+          "glyphBitmap": {
+            "width": 6,
+            "height": 3,
+            "pixelArray": "070808080804f8ffffffff9036383838381f"
+          },
+          "source": {
+            "objID": "d2bc71ed-fe44-4282-eb84-4e16e20fc117",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 175
+          }
+        },
+        {
+          "objID": "77218847-247b-4dee-9591-ababa8b7200c",
+          "encoding": 176,
+          "x": 0,
+          "y": 5,
+          "width": 7,
+          "height": 6,
+          "dx": 6.704010009765625,
+          "glyphBitmap": {
+            "width": 7,
+            "height": 6,
+            "pixelArray": "0043ccebae19001cf3672fa5c20057c900001dff072cf335027ada00006bf4fcdc33000000081b010000"
+          },
+          "source": {
+            "objID": "421e4d74-a613-44e2-a60b-8f1d68e3bcf6",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 176
+          }
+        },
+        {
+          "objID": "3b43ead9-c5ea-4e5f-d865-52b6d6958b81",
+          "encoding": 177,
+          "x": 1,
+          "y": 0,
+          "width": 8,
+          "height": 11,
+          "dx": 9.440017700195312,
+          "glyphBitmap": {
+            "width": 8,
+            "height": 11,
+            "pixelArray": "0000084427000000000020ff94000000000020ff94000000a0a8b3ffdaa8a846f4ffffffffffff6c000020ff94000000000020ff94000000000020ff940000000000000000000000a3acacacacacac48f4ffffffffffff6c"
+          },
+          "source": {
+            "objID": "125a35df-2f77-4041-daac-8c4d63a7c95d",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 177
+          }
+        },
+        {
+          "objID": "365c38e1-490c-4017-c1e0-8296595b9cff",
+          "encoding": 178,
+          "x": 0,
+          "y": 5,
+          "width": 7,
+          "height": 7,
+          "dx": 6.8800201416015625,
+          "glyphBitmap": {
+            "width": 7,
+            "height": 7,
+            "pixelArray": "17a6eef4bc25003dbe5045d7bc0000000000b5c3000000007cfc4c0000018ef853000004a1fb662424054affffffffff24"
+          },
+          "source": {
+            "objID": "49d7a948-be1b-43b7-bfa3-698012ec8f63",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 178
+          }
+        },
+        {
+          "objID": "15843142-1a0d-4a5f-b89c-7b4781906572",
+          "encoding": 179,
+          "x": 0,
+          "y": 5,
+          "width": 7,
+          "height": 7,
+          "dx": 6.8800201416015625,
+          "glyphBitmap": {
+            "width": 7,
+            "height": 7,
+            "pixelArray": "64ffffffffde000e24246cfc5400000036f57d0000000077e6ff9d000000000062ff2747984a38a1f71441c0eaf9ce4700"
+          },
+          "source": {
+            "objID": "6cecd054-af09-4f6b-f474-6b590e89658c",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 179
+          }
+        },
+        {
+          "objID": "7ac22cb8-a805-44a0-9513-ea01a680d7fc",
+          "encoding": 180,
+          "x": 3,
+          "y": 10,
+          "width": 5,
+          "height": 3,
+          "dx": 9.600021362304688,
+          "glyphBitmap": {
+            "width": 5,
+            "height": 3,
+            "pixelArray": "00004d80580045fbc7132cf1b40a00"
+          },
+          "source": {
+            "objID": "3409ba10-6636-4ade-e9a2-fc89270ed26a",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 180
+          }
+        },
+        {
+          "objID": "fef0becb-2389-4c5c-e896-669d38b6ac2d",
+          "encoding": 181,
+          "x": 1,
+          "y": -3,
+          "width": 9,
+          "height": 12,
+          "dx": 10.976028442382812,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 12,
+            "pixelArray": "b0ff5000000058ffa8b0ff5000000058ffa8b0ff5000000058ffa8b0ff5000000058ffa8b0ff500000005bffa8b0ff630000007bffa8b0ffc006001ae2ffa8b0ffffe4c4f3fbffa8b0ffaddff8c665ffa8b0ff50000000000000b0ff50000000000000b0ff50000000000000"
+          },
+          "source": {
+            "objID": "b801c5d3-25cc-4365-d82f-8e4849e5c501",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 181
+          }
+        },
+        {
+          "objID": "a1f17c82-b66a-44a2-eb8f-fad749eaeec7",
+          "encoding": 182,
+          "x": 0,
+          "y": -3,
+          "width": 10,
+          "height": 15,
+          "dx": 10.656021118164062,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 15,
+            "pixelArray": "0044c2efffffffffff283efcffffffaf90c8ff289fffffffff480080ff28a8ffffffff480080ff285bffffffff480080ff28007cf6ffff480080ff2800000474ff480080ff2800000060ff480080ff2800000060ff480080ff2800000060ff480080ff2800000060ff480080ff2800000060ff480080ff2800000060ff480080ff2800000060ff480080ff2800000006100400081002"
+          },
+          "source": {
+            "objID": "20c0aa06-be97-438b-f89f-c72dd5bae36a",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 182
+          }
+        },
+        {
+          "objID": "68bd5fba-14ee-4884-e570-e3c36130068a",
+          "encoding": 183,
+          "x": 0,
+          "y": 3,
+          "width": 4,
+          "height": 3,
+          "dx": 4.54400634765625,
+          "glyphBitmap": {
+            "width": 4,
+            "height": 3,
+            "pixelArray": "0073b62403fdff8800abef41"
+          },
+          "source": {
+            "objID": "0924b3e0-b836-4b41-b92c-0b1c606b4706",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 183
+          }
+        },
+        {
+          "objID": "b6ca0881-b14f-416e-a753-7625ae9521d8",
+          "encoding": 184,
+          "x": 2,
+          "y": -5,
+          "width": 5,
+          "height": 5,
+          "dx": 9.600021362304688,
+          "glyphBitmap": {
+            "width": 5,
+            "height": 5,
+            "pixelArray": "0000932e00000ffcaf16001412f27607eefbe2290008180200"
+          },
+          "source": {
+            "objID": "4c7ca772-5e37-4c93-b868-95d5f7210d1f",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 184
+          }
+        },
+        {
+          "objID": "49ef9f68-0dc5-440a-f334-57ac63b147ff",
+          "encoding": 185,
+          "x": 1,
+          "y": 5,
+          "width": 5,
+          "height": 7,
+          "dx": 6.8800201416015625,
+          "glyphBitmap": {
+            "width": 5,
+            "height": 7,
+            "pixelArray": "a4ffff74001727ff74000004ff74000004ff74000004ff74001b27ff8723c4fffffffc"
+          },
+          "source": {
+            "objID": "ac322cde-2a8d-4001-e739-527da563a1ce",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 185
+          }
+        },
+        {
+          "objID": "764dceb6-d712-493b-b191-f7f0b00b06ac",
+          "encoding": 186,
+          "x": 0,
+          "y": 6,
+          "width": 7,
+          "height": 6,
+          "dx": 6.75201416015625,
+          "glyphBitmap": {
+            "width": 7,
+            "height": 6,
+            "pixelArray": "0067def8cb3c0045fe6f2fa2f21283df000020ff4357fb400379fb1b018ffafeee5b0000000c21050000"
+          },
+          "source": {
+            "objID": "1e4ff44c-e16a-4979-f9fb-a1b3538df984",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 186
+          }
+        },
+        {
+          "objID": "eea69f36-81c5-41f5-ff7b-b9456773d95d",
+          "encoding": 187,
+          "x": 0,
+          "y": 1,
+          "width": 8,
+          "height": 7,
+          "dx": 8.560012817382812,
+          "glyphBitmap": {
+            "width": 8,
+            "height": 7,
+            "pixelArray": "297432067159000008d5e21089fe48000032faa706d2e714000086ff5432ffa80003c7ef1d77ff61007cff572ef9ab0031faa206d1e41200"
+          },
+          "source": {
+            "objID": "f405a130-6407-45c5-cddd-9f9fcfb6fc01",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 187
+          }
+        },
+        {
+          "objID": "ef1455d9-aa9d-40df-c49f-e7ecf230dd33",
+          "encoding": 188,
+          "x": 1,
+          "y": 0,
+          "width": 16,
+          "height": 12,
+          "dx": 16.624038696289062,
+          "glyphBitmap": {
+            "width": 16,
+            "height": 12,
+            "pixelArray": "a4ffff74000000000011e694000000001e33ff7400000000009fe00c000000000004ff740000000047fe4500000000000004ff740000000de19d0000000000000004ff7400000095e61000000a0800000004ff7400003efe4f000044fd510000c4fffffffc09daa7000016e795000000243030302f8beb150001b8d00f2402000000000036fc59000075f52834ff140000000006d4b1000000f7ffffffffff4000000081f01a0000002f303077ff400c00000faa56000000000000003cb00d00"
+          },
+          "source": {
+            "objID": "caa67046-58b7-4734-ff05-6bb0c6b8ccfc",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 188
+          }
+        },
+        {
+          "objID": "fb497f31-40fd-44fc-94ec-98d7dc124bee",
+          "encoding": 189,
+          "x": 1,
+          "y": -1,
+          "width": 15,
+          "height": 12,
+          "dx": 16.624038696289062,
+          "glyphBitmap": {
+            "width": 15,
+            "height": 12,
+            "pixelArray": "a4ffff74000000000013e7900000001e33ff740000000000aad8090000000004ff740000000059fc36000000000004ff740000001aee8300020000000004ff74000000b6cf3fc8fcf4a50ac4fffffffc0066f82c6ba0465ef879243030302f21f3770000000006ed810000000002c1c50200000002a1f1230000000072f52400000005a9f03a0000000029f76a00000009b6e9300000000004cbba0100000083ffffffffe400000a300f000000001a303030302a"
+          },
+          "source": {
+            "objID": "0462724d-46a5-4281-8b20-c568bc7e123d",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 189
+          }
+        },
+        {
+          "objID": "6b8435cb-a8a3-4185-c787-6a33f9e23e34",
+          "encoding": 190,
+          "x": 0,
+          "y": 0,
+          "width": 17,
+          "height": 12,
+          "dx": 16.624038696289062,
+          "glyphBitmap": {
+            "width": 17,
+            "height": 12,
+            "pixelArray": "64ffffffffdf0000000011e694000000001230306dfe5e000000009fe00c00000000000028ee7d0000000047fe450000000000000088fff98200000de19d000000000000000000067bff210095e6100000191200003371221082fe1d3efe4f00004efe4700005af1fffff87409daa700001aeb8d000000000320300d008beb150001bcce10300300000000000036fc59000077f42734ff14000000000006d4b1000000f7ffffffffff400000000081f01a0000002f303077ff400c0000000faa56000000000000003cb00d00"
+          },
+          "source": {
+            "objID": "2c096d48-5454-46bd-8a4a-9817ecdf5dca",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 190
+          }
+        },
+        {
+          "objID": "d6ded191-e9ed-4fc7-ba95-b3255b02af6e",
+          "encoding": 191,
+          "x": 0,
+          "y": -3,
+          "width": 10,
+          "height": 12,
+          "dx": 9.2960205078125,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 12,
+            "pixelArray": "00000041efa4000000000000007fffef00000000000000118043000000000000000104020000000000000064ffa500000000000020e5ff4600000000001fe0ff70000000000000b2ff7f00000000000001f5ff1f00000019010000eeff96140b53e8b90a0071fffffffffffe830000003a9cbfbd93350000"
+          },
+          "source": {
+            "objID": "2f15a662-7302-4f3f-af08-378967eb700f",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 191
+          }
+        },
+        {
+          "objID": "a37434bd-da38-4c6b-b73a-eeb941267761",
+          "encoding": 192,
+          "x": -1,
+          "y": 0,
+          "width": 14,
+          "height": 15,
+          "dx": 11.984024047851562,
+          "glyphBitmap": {
+            "width": 14,
+            "height": 15,
+            "pixelArray": "000000049eff9900000000000000000000000085ff76000000000000000000000000577e0f0000000000000000000042ffff3900000000000000000000adffffa50000000000000000001cfcd5e2f917000000000000000084ff6c7cff7c0000000000000006e9f40f18fae3040000000000005aff9b0000aaff54000000000000c6ff33000040ffbf000000000031fffbb4b4b4b4feff2b000000009cffffffffffffffff9700000011f6f20a0000000012f9f30e000073ff9d000000000000acff6e0001dcff3f0000000000004cffd801"
+          },
+          "source": {
+            "objID": "d7d15ef2-68a6-4dc7-e09c-5999ef7de4d0",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 192
+          }
+        },
+        {
+          "objID": "a6c4c4b6-4ef9-4234-ee16-80000fe6fc69",
+          "encoding": 193,
+          "x": -1,
+          "y": 0,
+          "width": 14,
+          "height": 15,
+          "dx": 11.984024047851562,
+          "glyphBitmap": {
+            "width": 14,
+            "height": 15,
+            "pixelArray": "00000000000000a1ff96020000000000000000007fff7d00000000000000000000137f53000000000000000000000042ffff3900000000000000000000adffffa50000000000000000001cfcd5e2f917000000000000000084ff6c7cff7c0000000000000006e9f40f18fae3040000000000005aff9b0000aaff54000000000000c6ff33000040ffbf000000000031fffbb4b4b4b4feff2b000000009cffffffffffffffff9700000011f6f20a0000000012f9f30e000073ff9d000000000000acff6e0001dcff3f0000000000004cffd801"
+          },
+          "source": {
+            "objID": "19436139-8a9d-4d44-ebe0-e6ded495d095",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 193
+          }
+        },
+        {
+          "objID": "d9022909-e4ca-45f7-911a-cb5ba856e848",
+          "encoding": 194,
+          "x": -1,
+          "y": 0,
+          "width": 14,
+          "height": 15,
+          "dx": 11.984024047851562,
+          "glyphBitmap": {
+            "width": 14,
+            "height": 15,
+            "pixelArray": "00000000005bfffe530000000000000000003ef99ca4f63700000000000000006d6a01026d6900000000000000000042ffff3900000000000000000000adffffa50000000000000000001cfcd5e2f917000000000000000084ff6c7cff7c0000000000000006e9f40f18fae3040000000000005aff9b0000aaff54000000000000c6ff33000040ffbf000000000031fffbb4b4b4b4feff2b000000009cffffffffffffffff9700000011f6f20a0000000012f9f30e000073ff9d000000000000acff6e0001dcff3f0000000000004cffd801"
+          },
+          "source": {
+            "objID": "d459bcd1-ccce-4131-f9c6-c773e75b343c",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 194
+          }
+        },
+        {
+          "objID": "285365bd-3f02-4eef-fab6-8f94139968a8",
+          "encoding": 195,
+          "x": -1,
+          "y": 0,
+          "width": 14,
+          "height": 16,
+          "dx": 11.984024047851562,
+          "glyphBitmap": {
+            "width": 14,
+            "height": 16,
+            "pixelArray": "00000000000000000003000000000000000048eece3663c60000000000000000c88b73f2fc5600000000000000002307000a130000000000000000000042ffff3900000000000000000000adffffa50000000000000000001cfcd5e2f917000000000000000084ff6c7cff7c0000000000000006e9f40f18fae3040000000000005aff9b0000aaff54000000000000c6ff33000040ffbf000000000031fffbb4b4b4b4feff2b000000009cffffffffffffffff9700000011f6f20a0000000012f9f30e000073ff9d000000000000acff6e0001dcff3f0000000000004cffd801"
+          },
+          "source": {
+            "objID": "6ba11f83-4821-498b-97cd-c2f5576f736f",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 195
+          }
+        },
+        {
+          "objID": "fb4c7c2b-ff4b-4e3b-9162-4918ea311990",
+          "encoding": 196,
+          "x": -1,
+          "y": 0,
+          "width": 14,
+          "height": 15,
+          "dx": 11.984024047851562,
+          "glyphBitmap": {
+            "width": 14,
+            "height": 15,
+            "pixelArray": "0000000056f1363ef24d000000000000000058f53840f550000000000000000000000000000000000000000000000042ffff3900000000000000000000adffffa50000000000000000001cfcd5e2f917000000000000000084ff6c7cff7c0000000000000006e9f40f18fae3040000000000005aff9b0000aaff54000000000000c6ff33000040ffbf000000000031fffbb4b4b4b4feff2b000000009cffffffffffffffff9700000011f6f20a0000000012f9f30e000073ff9d000000000000acff6e0001dcff3f0000000000004cffd801"
+          },
+          "source": {
+            "objID": "c430e531-64cf-4e74-8688-b51ed4cb8bc5",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 196
+          }
+        },
+        {
+          "objID": "f86c69be-3944-4fc6-fc7a-95064f71e5f5",
+          "encoding": 197,
+          "x": -1,
+          "y": 0,
+          "width": 14,
+          "height": 17,
+          "dx": 11.984024047851562,
+          "glyphBitmap": {
+            "width": 14,
+            "height": 17,
+            "pixelArray": "000000000035cbc72c00000000000000000000c52434ba00000000000000000000c92230be0000000000000000000039ccc93000000000000000000000000000000000000000000000000042ffff3900000000000000000000adffffa50000000000000000001cfcd5e2f917000000000000000084ff6c7cff7c0000000000000006e9f40f18fae3040000000000005aff9b0000aaff54000000000000c6ff33000040ffbf000000000031fffbb4b4b4b4feff2b000000009cffffffffffffffff9700000011f6f20a0000000012f9f30e000073ff9d000000000000acff6e0001dcff3f0000000000004cffd801"
+          },
+          "source": {
+            "objID": "082951d7-62eb-455c-d262-86e555e905c7",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 197
+          }
+        },
+        {
+          "objID": "718ebfb5-de52-4baa-fdac-f2407ea13ab4",
+          "encoding": 198,
+          "x": -1,
+          "y": 0,
+          "width": 18,
+          "height": 12,
+          "dx": 17.008041381835938,
+          "glyphBitmap": {
+            "width": 18,
+            "height": 12,
+            "pixelArray": "00000000000003d6fffffffffffffffff80000000000000064ffeefffad4d4d4d4d4cd00000000000009e5f650ffe000000000000000000000000079ff8734ffe0000000000000000000000013f0ec0f34ffe000000000000000000000008fff710034fff9c8c8c8c8c8380000000020f8df070034ffffffffffffff4800000000a4ffddb4b4c3ffe000000000000000000030feffffffffffffe0000000000000000000b9ff4900000034ffe0000000000000000044ffcb0000000034fffad0d0d0d0d0d02701cdff4e0000000034ffffffffffffffff30"
+          },
+          "source": {
+            "objID": "091875c4-c3c0-4ede-f804-88eb877eb711",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 198
+          }
+        },
+        {
+          "objID": "e1265b44-a6bc-49e4-d684-7d5f3aaa2664",
+          "encoding": 199,
+          "x": 0,
+          "y": -4,
+          "width": 12,
+          "height": 16,
+          "dx": 11.63201904296875,
+          "glyphBitmap": {
+            "width": 12,
+            "height": 16,
+            "pixelArray": "0000002290daf7ecb9540000000056f4ffffeef6ffffa8040037faff9e1f00034be08f0000c0ff9a000000000010000019fffb1700000000000000003dffda0000000000000000003dffda0000000000000000001afffb17000000000000000000c3ff9a0000000000160100003afbff9d20000451e49601000059f6fffff2f9ffffa5030000002594e8ffedb8520000000000000063e1360000000000000000071b7cf90c000000000000005afcfdaf00000000000000000013100000000000"
+          },
+          "source": {
+            "objID": "44f5ec3a-c167-4269-c9e4-91be63202c47",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 199
+          }
+        },
+        {
+          "objID": "029a046f-4d5a-4231-a625-79e060b1f5e4",
+          "encoding": 200,
+          "x": 1,
+          "y": 0,
+          "width": 9,
+          "height": 15,
+          "dx": 10.720016479492188,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 15,
+            "pixelArray": "0022dbf93f00000000000016cbee280000000000000c795e00000080ffffffffffffffb080ffedd4d4d4d4d49180ff9400000000000080ff9400000000000080ff9400000000000080ffe8c8c8c8c8c40080fffffffffffffc0080ff9400000000000080ff9400000000000080ff9400000000000080ffebd0d0d0d0d0bc80ffffffffffffffe8"
+          },
+          "source": {
+            "objID": "9034bb17-81be-41b7-a2c5-03081596a32b",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 200
+          }
+        },
+        {
+          "objID": "53da20e0-c535-4418-b952-507ea85a6be5",
+          "encoding": 201,
+          "x": 1,
+          "y": 0,
+          "width": 9,
+          "height": 15,
+          "dx": 10.720016479492188,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 15,
+            "pixelArray": "000000001be3f346000000000dd0e933000000000042802300000080ffffffffffffffb080ffedd4d4d4d4d49180ff9400000000000080ff9400000000000080ff9400000000000080ffe8c8c8c8c8c40080fffffffffffffc0080ff9400000000000080ff9400000000000080ff9400000000000080ffebd0d0d0d0d0bc80ffffffffffffffe8"
+          },
+          "source": {
+            "objID": "ebb13dbd-1959-420c-f5ae-0d21ff2c2abd",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 201
+          }
+        },
+        {
+          "objID": "8dbac8dc-fbfb-48fe-a4c4-0835ea97574e",
+          "encoding": 202,
+          "x": 1,
+          "y": 0,
+          "width": 9,
+          "height": 15,
+          "dx": 10.720016479492188,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 15,
+            "pixelArray": "000003b6ffde160000000095f667e1c70800001c803b001e7f3a0080ffffffffffffffb080ffedd4d4d4d4d49180ff9400000000000080ff9400000000000080ff9400000000000080ffe8c8c8c8c8c40080fffffffffffffc0080ff9400000000000080ff9400000000000080ff9400000000000080ffebd0d0d0d0d0bc80ffffffffffffffe8"
+          },
+          "source": {
+            "objID": "27d0927d-9477-4f8e-904e-5433a55954c0",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 202
+          }
+        },
+        {
+          "objID": "253d108f-9315-4a42-9d6e-c69fe69b4314",
+          "encoding": 203,
+          "x": 1,
+          "y": 0,
+          "width": 9,
+          "height": 15,
+          "dx": 10.720016479492188,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 15,
+            "pixelArray": "0000aecf0096de09000000b2d3009ae20a0000000000000000000080ffffffffffffffb080ffedd4d4d4d4d49180ff9400000000000080ff9400000000000080ff9400000000000080ffe8c8c8c8c8c40080fffffffffffffc0080ff9400000000000080ff9400000000000080ff9400000000000080ffebd0d0d0d0d0bc80ffffffffffffffe8"
+          },
+          "source": {
+            "objID": "ce205ab8-9264-44c8-adce-083eba71c0ac",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 203
+          }
+        },
+        {
+          "objID": "efc7da9f-36d1-4986-fc3f-d53d0b31b09d",
+          "encoding": 204,
+          "x": -1,
+          "y": 0,
+          "width": 5,
+          "height": 15,
+          "dx": 5.10400390625,
+          "glyphBitmap": {
+            "width": 5,
+            "height": 15,
+            "pixelArray": "2de5f53400001ed7e71e0000127d56000080ff94000080ff94000080ff94000080ff94000080ff94000080ff94000080ff94000080ff94000080ff94000080ff94000080ff94000080ff94"
+          },
+          "source": {
+            "objID": "17c4d366-ac3f-46da-9f73-858d9d568449",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 204
+          }
+        },
+        {
+          "objID": "ff915909-dc4d-48c6-f5cc-745504f8f5ca",
+          "encoding": 205,
+          "x": 1,
+          "y": 0,
+          "width": 5,
+          "height": 15,
+          "dx": 5.10400390625,
+          "glyphBitmap": {
+            "width": 5,
+            "height": 15,
+            "pixelArray": "0025eced3b13dbe128004a7f1a000080ff94000080ff94000080ff94000080ff94000080ff94000080ff94000080ff94000080ff94000080ff94000080ff94000080ff94000080ff940000"
+          },
+          "source": {
+            "objID": "6f09fc76-735e-4a46-deac-f89a28d6c41d",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 205
+          }
+        },
+        {
+          "objID": "bc67db35-bab9-42c1-f625-674cec9fdb60",
+          "encoding": 206,
+          "x": -1,
+          "y": 0,
+          "width": 7,
+          "height": 15,
+          "dx": 5.10400390625,
+          "glyphBitmap": {
+            "width": 7,
+            "height": 15,
+            "pixelArray": "0008c5ffd30e0001a7f265e9b80426803300278030000080ff940000000080ff940000000080ff940000000080ff940000000080ff940000000080ff940000000080ff940000000080ff940000000080ff940000000080ff940000000080ff940000000080ff940000"
+          },
+          "source": {
+            "objID": "a1399a4c-97e7-4c80-fab7-697a1eca433d",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 206
+          }
+        },
+        {
+          "objID": "05818fb0-dd77-4796-bb51-5a01b377842f",
+          "encoding": 207,
+          "x": 0,
+          "y": 0,
+          "width": 6,
+          "height": 15,
+          "dx": 5.10400390625,
+          "glyphBitmap": {
+            "width": 6,
+            "height": 15,
+            "pixelArray": "c2bc00a6d502c6c000aad9030000000000000080ff9400000080ff9400000080ff9400000080ff9400000080ff9400000080ff9400000080ff9400000080ff9400000080ff9400000080ff9400000080ff9400000080ff940000"
+          },
+          "source": {
+            "objID": "6a0e0962-aa97-4db7-c8d7-3a6a80fcf335",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 207
+          }
+        },
+        {
+          "objID": "5e47792f-101c-4d17-ecc1-f741b7bc8ad9",
+          "encoding": 208,
+          "x": 0,
+          "y": 0,
+          "width": 13,
+          "height": 12,
+          "dx": 13.376022338867188,
+          "glyphBitmap": {
+            "width": 13,
+            "height": 12,
+            "pixelArray": "0058fffffffffde5b6550000000058fff6d8d8dcf6ffffb20a000058ffc00000000456e9ffa0000058ffc0000000000032faff280058ffc0000000000000aeff7b8cf0ffff98986f0000007aff9cecffffffffffbc0000007aff9d0058ffc0000000000000adff7d0058ffc000000000002ffaff2a0058ffc00000000352e8ffa2000058fff5d4d4d7f2ffffb30a000058fffffffffde6b655000000"
+          },
+          "source": {
+            "objID": "61907ae1-79de-4b5a-8911-781c557efaf3",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 208
+          }
+        },
+        {
+          "objID": "6fffa6f0-bb64-4832-9158-4fb1ee39d412",
+          "encoding": 209,
+          "x": 1,
+          "y": 0,
+          "width": 11,
+          "height": 16,
+          "dx": 12.96002197265625,
+          "glyphBitmap": {
+            "width": 11,
+            "height": 16,
+            "pixelArray": "0000000000000002010000000004b7f2870de046000000004ce54dc0fecd05000000000f1b00001a0300000080ff9900000000009cff7480ffff5b000000009cff7480fffff4290000009cff7480fffeffd40a00009cff7480ffa3e2ffa200009cff7480ff9039faff65009cff7480ff900070fff72f9cff7480ff900000adffdbaaff7480ff9000000edbfffeff7480ff9000000030f7ffff7480ff900000000064ffff7480ff900000000000a1ff74"
+          },
+          "source": {
+            "objID": "2147139c-3984-467e-91d9-38429805a53b",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 209
+          }
+        },
+        {
+          "objID": "e2d1b994-674e-493d-862b-959b06840f6b",
+          "encoding": 210,
+          "x": 0,
+          "y": 0,
+          "width": 13,
+          "height": 15,
+          "dx": 13.472030639648438,
+          "glyphBitmap": {
+            "width": 13,
+            "height": 15,
+            "pixelArray": "00000011abff76000000000000000000000063f489000000000000000000000000000000000000000000228fd9f6e8bb58010000000056f4ffffeefaffffb50d000037faff9c1c000354e8ffa90000c0ff9900000000002bf6ff3719fffb170000000000009cff903dffda0000000000000063ffb43cffda0000000000000063ffb418fffb180000000000009cff9000beff9900000000002af6ff370035f9ff9b1e000554e8ffa800000054f4fffff1fbffffb40c000000002290d9f6e9bb58010000"
+          },
+          "source": {
+            "objID": "091c4317-1167-48c1-fab9-4217b41d5feb",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 210
+          }
+        },
+        {
+          "objID": "a47e03e9-f58f-4365-e4e4-f4a81bd4f818",
+          "encoding": 211,
+          "x": 0,
+          "y": 0,
+          "width": 13,
+          "height": 15,
+          "dx": 13.472030639648438,
+          "glyphBitmap": {
+            "width": 13,
+            "height": 15,
+            "pixelArray": "00000000000021dcea4b00000000000000002be5b9180000000000000000000000000000000000000000228fd9f6e8bb58010000000056f4ffffeefaffffb50d000037faff9c1c000354e8ffa90000c0ff9900000000002bf6ff3719fffb170000000000009cff903dffda0000000000000063ffb43cffda0000000000000063ffb418fffb180000000000009cff9000beff9900000000002af6ff370035f9ff9b1e000554e8ffa800000054f4fffff1fbffffb40c000000002290d9f6e9bb58010000"
+          },
+          "source": {
+            "objID": "1d5dd29e-07b4-4ac2-fa8b-751c754dbdb6",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 211
+          }
+        },
+        {
+          "objID": "56867570-a59b-45de-818e-28a6919ce361",
+          "encoding": 212,
+          "x": 0,
+          "y": 0,
+          "width": 13,
+          "height": 15,
+          "dx": 13.472030639648438,
+          "glyphBitmap": {
+            "width": 13,
+            "height": 15,
+            "pixelArray": "0000000006adfdf03d000000000000000bbbd32983f44b00000000000000000000000000000000000000228fd9f6e8bb58010000000056f4ffffeefaffffb50d000037faff9c1c000354e8ffa90000c0ff9900000000002bf6ff3719fffb170000000000009cff903dffda0000000000000063ffb43cffda0000000000000063ffb418fffb180000000000009cff9000beff9900000000002af6ff370035f9ff9b1e000554e8ffa800000054f4fffff1fbffffb40c000000002290d9f6e9bb58010000"
+          },
+          "source": {
+            "objID": "69f21d55-ec92-4a1d-ef3c-0bd773a38e07",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 212
+          }
+        },
+        {
+          "objID": "b5610958-0e43-4c0a-8c05-f053a03ea7c6",
+          "encoding": 213,
+          "x": 0,
+          "y": 0,
+          "width": 13,
+          "height": 16,
+          "dx": 13.472030639648438,
+          "glyphBitmap": {
+            "width": 13,
+            "height": 16,
+            "pixelArray": "00000000000000000102000000000000007ef4af1aa2860000000000000cfb5c98fced2500000000000005250000130a00000000000000228fd9f6e8bb58010000000056f4ffffeefaffffb50d000037faff9c1c000354e8ffa90000c0ff9900000000002bf6ff3719fffb170000000000009cff903dffda0000000000000063ffb43cffda0000000000000063ffb418fffb180000000000009cff9000beff9900000000002af6ff370035f9ff9b1e000554e8ffa800000054f4fffff1fbffffb40c000000002290d9f6e9bb58010000"
+          },
+          "source": {
+            "objID": "c74ff4d1-adf5-4505-d984-566a600d4e7a",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 213
+          }
+        },
+        {
+          "objID": "d8e9e215-9e56-4536-9ae2-1793ee898d4b",
+          "encoding": 214,
+          "x": 0,
+          "y": 0,
+          "width": 13,
+          "height": 15,
+          "dx": 13.472030639648438,
+          "glyphBitmap": {
+            "width": 13,
+            "height": 15,
+            "pixelArray": "0000000092e00b78ea1b0000000000000096e40c7bee1d00000000000000000000000000000000000000228fd9f6e8bb58010000000056f4ffffeefaffffb50d000037faff9c1c000354e8ffa90000c0ff9900000000002bf6ff3719fffb170000000000009cff903dffda0000000000000063ffb43cffda0000000000000063ffb418fffb180000000000009cff9000beff9900000000002af6ff370035f9ff9b1e000554e8ffa800000054f4fffff1fbffffb40c000000002290d9f6e9bb58010000"
+          },
+          "source": {
+            "objID": "a3c20ef6-d4de-442d-8593-81fbf588f550",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 214
+          }
+        },
+        {
+          "objID": "889f2588-d7f7-4f1a-bbae-6513a63f9e0f",
+          "encoding": 215,
+          "x": 1,
+          "y": 2,
+          "width": 7,
+          "height": 8,
+          "dx": 9.440017700195312,
+          "glyphBitmap": {
+            "width": 7,
+            "height": 8,
+            "pixelArray": "0008000000080016d9520010ce671bdff953c6ff710023e7ffff7e000005b9fffa380002a8ffa7f0ef302ffa9d013bf49f003b0200003608"
+          },
+          "source": {
+            "objID": "812e6ad0-f299-45c7-be5c-2700303d6533",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 215
+          }
+        },
+        {
+          "objID": "002e0134-71e0-45d4-86a0-8f2c13bd2be0",
+          "encoding": 216,
+          "x": 0,
+          "y": -1,
+          "width": 13,
+          "height": 14,
+          "dx": 13.472030639648438,
+          "glyphBitmap": {
+            "width": 13,
+            "height": 14,
+            "pixelArray": "000000000000000000008ce10e000000228fd9f6e8bb96fd4200000056f4ffffeefaffffff0d000037faff9c1c0003eeffffa90000c0ff990000004afb61f6ff3719fffb17000012e682009cff903dffda000000a8ce050063ffb43cffda000058f82b000063ffb418fffb1819ed740000009cff9000beff9ab6c20200002af6ff370035f9ffff40000554e8ffa800000077fffffff1fbffffb40c000002c2d890d9f6e9bb580100000074ed19000000000000000000"
+          },
+          "source": {
+            "objID": "5d399342-45f8-4ddf-b15f-eb8c18a69923",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 216
+          }
+        },
+        {
+          "objID": "03baea19-4711-43ec-c3dc-9863236c3dd8",
+          "encoding": 217,
+          "x": 1,
+          "y": 0,
+          "width": 11,
+          "height": 15,
+          "dx": 12.6240234375,
+          "glyphBitmap": {
+            "width": 11,
+            "height": 15,
+            "pixelArray": "00003fe3e42a000000000000000011aced3700000000000000000000000000000098ff7c0000000000d4ff3898ff7c0000000000d4ff3898ff7c0000000000d4ff3898ff7c0000000000d4ff3898ff7c0000000000d4ff3898ff7c0000000000d4ff3897ff7e0000000000d6ff378aff950000000000efff2960ffd50100000030fff80612f4ff920e0028cdffa500005efdfffef3ffffe21900000040b7eefae093170000"
+          },
+          "source": {
+            "objID": "e510f26f-8fcc-4532-9bd6-e7511c1539f0",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 217
+          }
+        },
+        {
+          "objID": "4161c37a-7800-4c43-90b1-a6c257115b2c",
+          "encoding": 218,
+          "x": 1,
+          "y": 0,
+          "width": 11,
+          "height": 15,
+          "dx": 12.6240234375,
+          "glyphBitmap": {
+            "width": 11,
+            "height": 15,
+            "pixelArray": "000000000065fdb71700000000000079f87101000000000000000000000000000098ff7c0000000000d4ff3898ff7c0000000000d4ff3898ff7c0000000000d4ff3898ff7c0000000000d4ff3898ff7c0000000000d4ff3898ff7c0000000000d4ff3897ff7e0000000000d6ff378aff950000000000efff2960ffd50100000030fff80612f4ff920e0028cdffa500005efdfffef3ffffe21900000040b7eefae093170000"
+          },
+          "source": {
+            "objID": "8d8d213f-bcfd-4cfc-8fba-ed3826f348ef",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 218
+          }
+        },
+        {
+          "objID": "41e241c8-ad97-4063-a264-13dda50d1a78",
+          "encoding": 219,
+          "x": 1,
+          "y": 0,
+          "width": 11,
+          "height": 15,
+          "dx": 12.6240234375,
+          "glyphBitmap": {
+            "width": 11,
+            "height": 15,
+            "pixelArray": "00000032eafdbc0c00000000003df09023c8c8120000000000000000000000000098ff7c0000000000d4ff3898ff7c0000000000d4ff3898ff7c0000000000d4ff3898ff7c0000000000d4ff3898ff7c0000000000d4ff3898ff7c0000000000d4ff3897ff7e0000000000d6ff378aff950000000000efff2960ffd50100000030fff80612f4ff920e0028cdffa500005efdfffef3ffffe21900000040b7eefae093170000"
+          },
+          "source": {
+            "objID": "5eb921c8-df3f-4562-8397-78832095ab1f",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 219
+          }
+        },
+        {
+          "objID": "3eaa5e01-a0ec-4519-aa0e-6cc5d4d69bee",
+          "encoding": 220,
+          "x": 1,
+          "y": 0,
+          "width": 11,
+          "height": 15,
+          "dx": 12.6240234375,
+          "glyphBitmap": {
+            "width": 11,
+            "height": 15,
+            "pixelArray": "000010e48904d9a0000000000011e88c04dca4000000000000000000000000000098ff7c0000000000d4ff3898ff7c0000000000d4ff3898ff7c0000000000d4ff3898ff7c0000000000d4ff3898ff7c0000000000d4ff3898ff7c0000000000d4ff3897ff7e0000000000d6ff378aff950000000000efff2960ffd50100000030fff80612f4ff920e0028cdffa500005efdfffef3ffffe21900000040b7eefae093170000"
+          },
+          "source": {
+            "objID": "fcce6b03-8ee0-4513-d381-9b65b8bd6cfe",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 220
+          }
+        },
+        {
+          "objID": "baca7a58-7bd7-49bd-e800-ebe02ea856e4",
+          "encoding": 221,
+          "x": -1,
+          "y": 0,
+          "width": 12,
+          "height": 15,
+          "dx": 10.576019287109375,
+          "glyphBitmap": {
+            "width": 12,
+            "height": 15,
+            "pixelArray": "00000000000056e6b214000000000000005ffb8e050000000000000000261f000000000004d7ff5b00000000009dff6f004cffe10800000030fdd9050000bcff7b000000bfff4f0000002efdf2170050ffbe00000000009cff9a06dbfd31000000000018f3fc9cff9e000000000000007bfffff4190000000000000009e4ff82000000000000000000c0ff58000000000000000000c0ff58000000000000000000c0ff58000000000000000000c0ff5800000000"
+          },
+          "source": {
+            "objID": "240033dc-99c7-42a1-9c4f-b08439eab09e",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 221
+          }
+        },
+        {
+          "objID": "6ea91911-448c-4ee8-a915-64bca76271b4",
+          "encoding": 222,
+          "x": 1,
+          "y": 0,
+          "width": 10,
+          "height": 12,
+          "dx": 11.61602783203125,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 12,
+            "pixelArray": "80ff940000000000000080ff940000000000000080fffffffff6d789120080ffedd4d4e2fdffdf1780ff9400000021ceff9180ff940000000050ffcf80ff940000000050ffcf80ff9400000020ceff9180ffedd4d4e2fdffdf1780fffffffff7d88a120080ff940000000000000080ff9400000000000000"
+          },
+          "source": {
+            "objID": "2588844f-b8af-4b18-d529-d7f91d8c482e",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 222
+          }
+        },
+        {
+          "objID": "97a57225-29ad-45f7-a1bd-8c9139be6ff1",
+          "encoding": 223,
+          "x": 1,
+          "y": 0,
+          "width": 10,
+          "height": 12,
+          "dx": 10.944015502929688,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 12,
+            "pixelArray": "000d8de0f9e49514000007ccfff1cdeeffd0040062ffca0f000acfff46009eff640000009cff5200afff50000a51f4e00d00b0ff5000d0ffff790100b0ff500095c6f8ff9b00b0ff5000000020ebff2bb0ff5000000000b4ff53b0ff5000000020ecff37b0ff5045e1cef8ffbe00b0ff5054eef8d87f0b00"
+          },
+          "source": {
+            "objID": "4c28569c-f74a-4157-ca3c-2da5801a2ed8",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 223
+          }
+        },
+        {
+          "objID": "6193eb28-6d0c-4660-d597-fb442dc93598",
+          "encoding": 224,
+          "x": 0,
+          "y": 0,
+          "width": 9,
+          "height": 12,
+          "dx": 9.712020874023438,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 12,
+            "pixelArray": "0010aaff780000000000000063f488000000000000000204000000003eade7f9de99160000d4ffe2c6f2ffcc03004139000015e1ff440000000417189fff6b0047d1fdffffffff7816f6f46e4a48a9ff7841ffba000000b1ff7813f2fc9070b5feff78003ac5f7f2b18aff78"
+          },
+          "source": {
+            "objID": "e2359020-f7f0-4dac-a5c4-3abc875e0705",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 224
+          }
+        },
+        {
+          "objID": "847374e6-97c6-4561-a9ee-5f72f4bdaeed",
+          "encoding": 225,
+          "x": 0,
+          "y": 0,
+          "width": 9,
+          "height": 12,
+          "dx": 9.712020874023438,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 12,
+            "pixelArray": "000000001edaec4e0000000027e2be1b0000000000020400000000003eade7f9de99160000d4ffe2c6f2ffcc03004139000015e1ff440000000417189fff6b0047d1fdffffffff7816f6f46e4a48a9ff7841ffba000000b1ff7813f2fc9070b5feff78003ac5f7f2b18aff78"
+          },
+          "source": {
+            "objID": "cf4795e4-f47a-462f-bb2b-670c43e93d04",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 225
+          }
+        },
+        {
+          "objID": "7f5511ac-9677-46b2-f8b3-4014469f790a",
+          "encoding": 226,
+          "x": 0,
+          "y": 0,
+          "width": 9,
+          "height": 12,
+          "dx": 9.712020874023438,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 12,
+            "pixelArray": "000005a9fef13e00000009b6d72c82f44a00000104010000030300003eade7f9de99160000d4ffe2c6f2ffcc03004139000015e1ff440000000417189fff6b0047d1fdffffffff7816f6f46e4a48a9ff7841ffba000000b1ff7813f2fc9070b5feff78003ac5f7f2b18aff78"
+          },
+          "source": {
+            "objID": "d9887e48-90dc-49c6-8890-93ddf9f57af0",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 226
+          }
+        },
+        {
+          "objID": "bee8f928-0fd5-4efc-f1c6-daec4cbb8121",
+          "encoding": 227,
+          "x": 0,
+          "y": 0,
+          "width": 9,
+          "height": 12,
+          "dx": 9.712020874023438,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 12,
+            "pixelArray": "0003b5fafffffb5d000003203731220d0000000000000000000000003eade7f9de99160000d4ffe2c6f2ffcc03004139000015e1ff440000000417189fff6b0047d1fdffffffff7816f6f46e4a48a9ff7841ffba000000b1ff7813f2fc9070b5feff78003ac5f7f2b18aff78"
+          },
+          "source": {
+            "objID": "3f052dbf-f574-474b-b692-f143ed6c1555",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 227
+          }
+        },
+        {
+          "objID": "f126f246-7750-4a56-ccc5-9b03b439e0d3",
+          "encoding": 228,
+          "x": 0,
+          "y": 0,
+          "width": 9,
+          "height": 12,
+          "dx": 9.712020874023438,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 12,
+            "pixelArray": "00008ee10d74eb1e00000092e50e77ef1f00000000000000000000003eade7f9de99160000d4ffe2c6f2ffcc03004139000015e1ff440000000417189fff6b0047d1fdffffffff7816f6f46e4a48a9ff7841ffba000000b1ff7813f2fc9070b5feff78003ac5f7f2b18aff78"
+          },
+          "source": {
+            "objID": "58af4acf-6483-459c-e112-6e7016b2d3c2",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 228
+          }
+        },
+        {
+          "objID": "c8b0ae71-804d-4f7b-aa05-f2284327ff37",
+          "encoding": 229,
+          "x": 0,
+          "y": 0,
+          "width": 9,
+          "height": 14,
+          "dx": 9.712020874023438,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 14,
+            "pixelArray": "0000005ed4b10f000000000ad80a6c7e000000000bd8096a81000000000063d5b4120000000000000000000000003eade7f9de99160000d4ffe2c6f2ffcc03004139000015e1ff440000000417189fff6b0047d1fdffffffff7816f6f46e4a48a9ff7841ffba000000b1ff7813f2fc9070b5feff78003ac5f7f2b18aff78"
+          },
+          "source": {
+            "objID": "8a038d21-dea2-4892-b3eb-07d9a4534dd9",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 229
+          }
+        },
+        {
+          "objID": "fdf80f4e-4314-4fd1-b0d4-0039e4b0f611",
+          "encoding": 230,
+          "x": 0,
+          "y": 0,
+          "width": 16,
+          "height": 9,
+          "dx": 15.888031005859375,
+          "glyphBitmap": {
+            "width": 16,
+            "height": 9,
+            "pixelArray": "003eade7fbe79c1442c0f5edad2a000000d4ffe2c6f2ffdefdfeced9fff43400004139000015e1fff63e000065ffcd000000000517189fffa818181818d6ff23004ad2fdffffffffffffffffffffff4118f7f16b4a48acffbc484848484848113dffbe000001c5fff54600000f7003000de7ffac8dcbffa6feffded0f7ff6c00002cb2ebf7cd5b0043baf0f8d5750400"
+          },
+          "source": {
+            "objID": "db726d2c-822b-4575-be52-641a2754016a",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 230
+          }
+        },
+        {
+          "objID": "ccfb1e94-d19e-4e12-950c-22e873f0ad3c",
+          "encoding": 231,
+          "x": 0,
+          "y": -5,
+          "width": 9,
+          "height": 14,
+          "dx": 9.2960205078125,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 14,
+            "pixelArray": "000030aceaf6cf63000046f8ffe6cffdff7d05e6ff7901002dc44742ffd10000000000005cffaa00000000000042ffd100000000000005e7ff7701002dc74a0049faffe8d2fdff78000033aeffffcf610000000000d85000000000000007c5fa4700000000001504e0860000000002e5fae0280000000000061702000000"
+          },
+          "source": {
+            "objID": "8fe9039b-450b-499d-bd06-b730460bde1d",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 231
+          }
+        },
+        {
+          "objID": "e279bf6f-3951-4bc4-f6c9-a7e1b4ba61f2",
+          "encoding": 232,
+          "x": 0,
+          "y": 0,
+          "width": 10,
+          "height": 12,
+          "dx": 9.9520263671875,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 12,
+            "pixelArray": "000380fcaa05000000000000003de2b70a0000000000000001040100000000003bb7eff0b73700000050fbfec4c1fdfa450006eafc46000040fade0144ffc018181818b8ff335cffffffffffffffff5043ffd14848484848481606e9fc5d000008720b00004bfaffe4cef4ff8700000034ade9f9dc850a00"
+          },
+          "source": {
+            "objID": "c35fe6a7-7227-450b-ebcd-89e5e83280c4",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 232
+          }
+        },
+        {
+          "objID": "1681e9a9-53fd-4b4d-a69c-f49767bc82f0",
+          "encoding": 233,
+          "x": 0,
+          "y": 0,
+          "width": 10,
+          "height": 12,
+          "dx": 9.9520263671875,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 12,
+            "pixelArray": "0000000009b4fa7701000000000fc2dc350000000000000104010000000000003bb7eff0b73700000050fbfec4c1fdfa450006eafc46000040fade0144ffc018181818b8ff335cffffffffffffffff5043ffd14848484848481606e9fc5d000008720b00004bfaffe4cef4ff8700000034ade9f9dc850a00"
+          },
+          "source": {
+            "objID": "d4b9e02b-63ee-4894-ac4c-b43badbb0873",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 233
+          }
+        },
+        {
+          "objID": "74bf0bd7-b2f6-44c5-c900-3c1f1fb1bf97",
+          "encoding": 234,
+          "x": 0,
+          "y": 0,
+          "width": 10,
+          "height": 12,
+          "dx": 9.9520263671875,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 12,
+            "pixelArray": "00000078fdfe6c000000000087ee4b55f27a00000000040200000204000000003bb7eff0b73700000050fbfec4c1fdfa450006eafc46000040fade0144ffc018181818b8ff335cffffffffffffffff5043ffd14848484848481606e9fc5d000008720b00004bfaffe4cef4ff8700000034ade9f9dc850a00"
+          },
+          "source": {
+            "objID": "083c898f-3116-4577-c299-9081602b1df6",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 234
+          }
+        },
+        {
+          "objID": "ecc308a9-8774-4134-aa19-a6ecba06ed33",
+          "encoding": 235,
+          "x": 0,
+          "y": 0,
+          "width": 10,
+          "height": 12,
+          "dx": 9.9520263671875,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 12,
+            "pixelArray": "000056f13641f24a0000000058f43843f54c00000000000000000000000000003bb7eff0b73700000050fbfec4c1fdfa450006eafc46000040fade0144ffc018181818b8ff335cffffffffffffffff5043ffd14848484848481606e9fc5d000008720b00004bfaffe4cef4ff8700000034ade9f9dc850a00"
+          },
+          "source": {
+            "objID": "4178402a-7ff9-41dd-decf-f7d605703519",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 235
+          }
+        },
+        {
+          "objID": "f2a7b63a-d04f-4197-fca6-dd6e015636b0",
+          "encoding": 236,
+          "x": -1,
+          "y": 0,
+          "width": 5,
+          "height": 12,
+          "dx": 4.6240081787109375,
+          "glyphBitmap": {
+            "width": 5,
+            "height": 12,
+            "pixelArray": "40e3e228000011a8e43200000000000000b0ff500000b0ff500000b0ff500000b0ff500000b0ff500000b0ff500000b0ff500000b0ff500000b0ff50"
+          },
+          "source": {
+            "objID": "2f34b1a3-bca5-4097-c7ed-b2619687a513",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 236
+          }
+        },
+        {
+          "objID": "98225274-5f2b-4e04-d514-1f5f9be3e19c",
+          "encoding": 237,
+          "x": 0,
+          "y": 0,
+          "width": 6,
+          "height": 12,
+          "dx": 4.6240081787109375,
+          "glyphBitmap": {
+            "width": 6,
+            "height": 12,
+            "pixelArray": "00006bfdb115007bef68000000000000000000b0ff50000000b0ff50000000b0ff50000000b0ff50000000b0ff50000000b0ff50000000b0ff50000000b0ff50000000b0ff500000"
+          },
+          "source": {
+            "objID": "d17d0616-6d5d-4d5b-dd38-7c09ed862bbc",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 237
+          }
+        },
+        {
+          "objID": "b48db1c4-706a-4a99-a07b-b18fd082ae7d",
+          "encoding": 238,
+          "x": -1,
+          "y": 0,
+          "width": 6,
+          "height": 12,
+          "dx": 4.6240081787109375,
+          "glyphBitmap": {
+            "width": 6,
+            "height": 12,
+            "pixelArray": "0020e6ffa70110d0b23be4850000000000000000b0ff50000000b0ff50000000b0ff50000000b0ff50000000b0ff50000000b0ff50000000b0ff50000000b0ff50000000b0ff5000"
+          },
+          "source": {
+            "objID": "206883c9-7ed9-4de8-fb66-c6b68668304e",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 238
+          }
+        },
+        {
+          "objID": "8175f885-5546-4801-80ba-904ea2d99b3a",
+          "encoding": 239,
+          "x": 0,
+          "y": 0,
+          "width": 5,
+          "height": 12,
+          "dx": 4.6240081787109375,
+          "glyphBitmap": {
+            "width": 5,
+            "height": 12,
+            "pixelArray": "9fcf35f0499dcb34ec48000000000000b0ff500000b0ff500000b0ff500000b0ff500000b0ff500000b0ff500000b0ff500000b0ff500000b0ff5000"
+          },
+          "source": {
+            "objID": "48a424c3-36d4-4ed8-a9da-f94799638871",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 239
+          }
+        },
+        {
+          "objID": "a8b46751-5fd3-43b1-82b7-dfb4381dd837",
+          "encoding": 240,
+          "x": 0,
+          "y": 0,
+          "width": 10,
+          "height": 12,
+          "dx": 10.368026733398438,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 12,
+            "pixelArray": "0065ddf7edcb73236d010066d3b7c3fcffffe82000003c94e8e8adffcf030000ad9a430300afff4e00002583a896405fff960055f8ffffffffbeffb910f3ff7b121791ffffc150ffc300000000d3ffab57ffb000000000bbff7221fdf52e000040fbf3190090fffac4c9fdfc5d00000169d1f7eab33c0000"
+          },
+          "source": {
+            "objID": "b7a26e00-cbf8-4fa6-f33d-6835714c07dd",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 240
+          }
+        },
+        {
+          "objID": "d4c379c1-f4a3-4bd4-bff5-a2f7c2361ff7",
+          "encoding": 241,
+          "x": 1,
+          "y": 0,
+          "width": 9,
+          "height": 12,
+          "dx": 10.96002197265625,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 12,
+            "pixelArray": "001ed3fdffffef3000000b23392c1f060000000000000000000000b0ff5fafeff0bc3100b0fffcf4c5e3fff31bb0ffe01b0006baff85b0ff7500000058ffacb0ff5300000044ffbcb0ff5000000044ffbcb0ff5000000044ffbcb0ff5000000044ffbcb0ff5000000044ffbc"
+          },
+          "source": {
+            "objID": "0af0fbed-3eee-4fc4-abe3-a6fbbfc783ee",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 241
+          }
+        },
+        {
+          "objID": "8be30da7-266e-4553-947a-1eca8e818fcb",
+          "encoding": 242,
+          "x": 0,
+          "y": 0,
+          "width": 10,
+          "height": 12,
+          "dx": 10.320022583007812,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 12,
+            "pixelArray": "000063f4c7110000000000000027cfd31900000000000000010401000000000034b0ecf4ca600000004afaffe4d5fdff940006e8ff72000035f0ff3f43ffd0000000007fff965cffaa0000000057ffb043ffd10000000080ff9506e9ff76000038f1ff40004cfbffe7d9fdff9800000037b3edf5cc640000"
+          },
+          "source": {
+            "objID": "46ac7e01-c2d0-4b03-e6ed-43486214a074",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 242
+          }
+        },
+        {
+          "objID": "8d7eb722-0871-4bcc-83d9-08bef40418ac",
+          "encoding": 243,
+          "x": 0,
+          "y": 0,
+          "width": 10,
+          "height": 12,
+          "dx": 10.320022583007812,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 12,
+            "pixelArray": "000000000193ff94080000000004a2ec4d00000000000000040200000000000034b0ecf4ca600000004afaffe4d5fdff940006e8ff72000035f0ff3f43ffd0000000007fff965cffaa0000000057ffb043ffd10000000080ff9506e9ff76000038f1ff40004cfbffe7d9fdff9800000037b3edf5cc640000"
+          },
+          "source": {
+            "objID": "36f35724-654e-47d0-98f0-44cfd48f9d9f",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 243
+          }
+        },
+        {
+          "objID": "59111637-3287-4014-afb8-e5fbe1bfe265",
+          "encoding": 244,
+          "x": 0,
+          "y": 0,
+          "width": 10,
+          "height": 12,
+          "dx": 10.320022583007812,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 12,
+            "pixelArray": "00000055fafe91010000000062f76b3ae49f030000000302000001040000000034b0ecf4ca600000004afaffe4d5fdff940006e8ff72000035f0ff3f43ffd0000000007fff965cffaa0000000057ffb043ffd10000000080ff9506e9ff76000038f1ff40004cfbffe7d9fdff9800000037b3edf5cc640000"
+          },
+          "source": {
+            "objID": "318c971c-1ef7-41a2-a846-d54c28cf6aec",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 244
+          }
+        },
+        {
+          "objID": "0c676987-c2d9-4284-f203-c7b5c13128eb",
+          "encoding": 245,
+          "x": 0,
+          "y": 0,
+          "width": 10,
+          "height": 12,
+          "dx": 10.320022583007812,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 12,
+            "pixelArray": "000065eeffffffbb00000000172c37261800000000000000000000000000000034b0ecf4ca600000004afaffe4d5fdff940006e8ff72000035f0ff3f43ffd0000000007fff965cffaa0000000057ffb043ffd10000000080ff9506e9ff76000038f1ff40004cfbffe7d9fdff9800000037b3edf5cc640000"
+          },
+          "source": {
+            "objID": "52bae3c2-e4b4-44fe-e6bb-73c11eeb72c4",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 245
+          }
+        },
+        {
+          "objID": "243343dd-8f32-4e9b-b5ee-583f8e21f13e",
+          "encoding": 246,
+          "x": 0,
+          "y": 0,
+          "width": 10,
+          "height": 12,
+          "dx": 10.320022583007812,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 12,
+            "pixelArray": "000034f1581fec700000000036f45b20f073000000000000000000000000000034b0ecf4ca600000004afaffe4d5fdff940006e8ff72000035f0ff3f43ffd0000000007fff965cffaa0000000057ffb043ffd10000000080ff9506e9ff76000038f1ff40004cfbffe7d9fdff9800000037b3edf5cc640000"
+          },
+          "source": {
+            "objID": "d81abfb8-14b6-4b5e-e4f4-45f7aa295e86",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 246
+          }
+        },
+        {
+          "objID": "f9a0c994-2358-4d09-94cd-99ee01b9bf53",
+          "encoding": 247,
+          "x": 1,
+          "y": 1,
+          "width": 8,
+          "height": 9,
+          "dx": 9.440017700195312,
+          "glyphBitmap": {
+            "width": 8,
+            "height": 9,
+            "pixelArray": "00002beb8c00000000004effc10000000000014f1d000000a3acacacacacac48f4ffffffffffff6c00000000000000000000014f1d00000000004fffc100000000002beb8c000000"
+          },
+          "source": {
+            "objID": "dc87f3d8-69ea-4619-9f4c-3555c20fe7eb",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 247
+          }
+        },
+        {
+          "objID": "aecca435-4384-42f0-a975-30bd0b043ffa",
+          "encoding": 248,
+          "x": 0,
+          "y": -1,
+          "width": 10,
+          "height": 11,
+          "dx": 10.320022583007812,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 11,
+            "pixelArray": "000000000000003bda09000034b0ecf4d1ff4300004afaffe4d5ffff940006e8ff72002affffff3f43ffd00002c6567fff965cffaa006cb20057ffb043ffd11de41c0080ff9506e9ffff6a0038f1ff40004cffffe9d9fdff98000012ffdcedf5cc640000009e7e00000000000000"
+          },
+          "source": {
+            "objID": "744db098-3376-41b3-ce2c-eb99f56a7930",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 248
+          }
+        },
+        {
+          "objID": "f9ee6d93-9c3b-43f1-d759-a7c63fcc8ba7",
+          "encoding": 249,
+          "x": 1,
+          "y": 0,
+          "width": 9,
+          "height": 12,
+          "dx": 10.896026611328125,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 12,
+            "pixelArray": "0035d9ec370000000000000a99ec41000000000000000000000000c0ff400000006cff94c0ff400000006cff94c0ff400000006cff94c0ff400000006cff94c0ff400000006fff94b0ff5300000091ff9489ffb2030025efff941ef5ffdfc6f7fdff940032bbeef1ad70ff94"
+          },
+          "source": {
+            "objID": "107dc8a4-eb6d-46f5-e3d1-54363d23371b",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 249
+          }
+        },
+        {
+          "objID": "00c3ca19-b2c5-42fb-e534-ad396d71c245",
+          "encoding": 250,
+          "x": 1,
+          "y": 0,
+          "width": 9,
+          "height": 12,
+          "dx": 10.896026611328125,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 12,
+            "pixelArray": "0000000059fac01e0000000066f279020000000000000000000000c0ff400000006cff94c0ff400000006cff94c0ff400000006cff94c0ff400000006cff94c0ff400000006fff94b0ff5300000091ff9489ffb2030025efff941ef5ffdfc6f7fdff940032bbeef1ad70ff94"
+          },
+          "source": {
+            "objID": "d9e76a8a-a109-4120-9a4b-80a17409aafb",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 250
+          }
+        },
+        {
+          "objID": "0a8e1a6a-0247-4f19-ca4e-ac2a3f6b48ce",
+          "encoding": 251,
+          "x": 1,
+          "y": 0,
+          "width": 9,
+          "height": 12,
+          "dx": 10.896026611328125,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 12,
+            "pixelArray": "000028e2fdc81300000030e4971db8ce1900000000000000000000c0ff400000006cff94c0ff400000006cff94c0ff400000006cff94c0ff400000006cff94c0ff400000006fff94b0ff5300000091ff9489ffb2030025efff941ef5ffdfc6f7fdff940032bbeef1ad70ff94"
+          },
+          "source": {
+            "objID": "1fc6db4a-ae57-4f1f-c882-b2032e6276ac",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 251
+          }
+        },
+        {
+          "objID": "e2f2b50c-c60f-4711-e7e5-345700fb30cb",
+          "encoding": 252,
+          "x": 1,
+          "y": 0,
+          "width": 9,
+          "height": 12,
+          "dx": 10.896026611328125,
+          "glyphBitmap": {
+            "width": 9,
+            "height": 12,
+            "pixelArray": "0008dd9800cab400000008e19c00ceb80000000000000000000000c0ff400000006cff94c0ff400000006cff94c0ff400000006cff94c0ff400000006cff94c0ff400000006fff94b0ff5300000091ff9489ffb2030025efff941ef5ffdfc6f7fdff940032bbeef1ad70ff94"
+          },
+          "source": {
+            "objID": "7f6e1898-8df3-4005-8b9d-673d592b9165",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 252
+          }
+        },
+        {
+          "objID": "754f920d-51b5-4f39-cc41-9cdfef8196b3",
+          "encoding": 253,
+          "x": -1,
+          "y": -3,
+          "width": 11,
+          "height": 15,
+          "dx": 9.248016357421875,
+          "glyphBitmap": {
+            "width": 11,
+            "height": 15,
+            "pixelArray": "000000000056f9c01e00000000000063f27902000000000000000000000000000001dbff3500000000d1fc1d0070ffa00000003effac00000ff4f7130000aaff3f00000096ff76001afbd2000000002affdf0281ff660000000000bcff52e7ee0a00000000004effecff8d00000000000002defffd22000000000000007cffb300000000001d0002beff430000000007e1d7d9ffbc00000000000fa2ebefa7110000000000"
+          },
+          "source": {
+            "objID": "f70178f9-3bf2-40d5-b340-d9478e8f26e2",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 253
+          }
+        },
+        {
+          "objID": "76378847-07c3-4419-a753-d45a07a5d480",
+          "encoding": 254,
+          "x": 1,
+          "y": -3,
+          "width": 10,
+          "height": 15,
+          "dx": 10.976028442382812,
+          "glyphBitmap": {
+            "width": 10,
+            "height": 15,
+            "pixelArray": "b0ff5000000000000000b0ff5000000000000000b0ff5000000000000000b0ff6eadf1f2be420000b0fffcfdd0e5fffd5600b0ffeb2e000179ffec07b0ff7500000000d5ff44b0ff4e00000000aeff5cb0ff7500000000d6ff44b0ffea2e00017dffed07b0fffafdd3e8fffe5900b0ff6baaf2f2c0460000b0ff5000000000000000b0ff5000000000000000b0ff5000000000000000"
+          },
+          "source": {
+            "objID": "4902c185-3964-40af-c96b-ca48f834683f",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 254
+          }
+        },
+        {
+          "objID": "41516921-f7ce-450c-c6ad-38c00898e6e9",
+          "encoding": 255,
+          "x": -1,
+          "y": -3,
+          "width": 11,
+          "height": 15,
+          "dx": 9.248016357421875,
+          "glyphBitmap": {
+            "width": 11,
+            "height": 15,
+            "pixelArray": "000006db9c00c6b6000000000006dfa000caba000000000000000000000000000001dbff3500000000d1fc1d0070ffa00000003effac00000ff4f7130000aaff3f00000096ff76001afbd2000000002affdf0281ff660000000000bcff52e7ee0a00000000004effecff8d00000000000002defffd22000000000000007cffb300000000001d0002beff430000000007e1d7d9ffbc00000000000fa2ebefa7110000000000"
+          },
+          "source": {
+            "objID": "d4b7766e-7ca1-4f37-d033-76829646af96",
+            "filePath": "assets\\fonts\\Montserrat-SemiBold.ttf",
+            "size": 16,
+            "encoding": 255
+          }
+        }
+      ]
+    }
+  ],
+  "readme": {
+    "objID": "e2540e2c-7904-4571-b35b-3b8e0d131097",
+    "readmeFile": "README.md"
+  },
+  "bitmaps": [
+    {
+      "objID": "3a10e85f-9f8b-4f42-f71d-0db219487f31",
+      "name": "log_eez",
+      "image": "data:image/png;base64,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",
+      "bpp": 32,
+      "alwaysBuild": false
+    },
+    {
+      "objID": "3b2a0fc1-46e7-41d1-8937-32b3694dfabe",
+      "name": "logo_lvgl",
+      "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANwAAABGCAYAAACnp/qkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAACxMAAAsTAQCanBgAAArLaVRYdFhNTDpjb20uYWRvYmUueG1wAAAAAAA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/Pg0KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDggNzkuMTY0MDM2LCAyMDE5LzA4LzEzLTAxOjA2OjU3ICAgICAgICAiPg0KICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPg0KICAgIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMS4wIChXaW5kb3dzKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjAtMDQtMjNUMDg6MjY6MjQrMDI6MDAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMjAtMDYtMDVUMDk6MTc6MjArMDI6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIwLTA2LTA1VDA5OjE3OjIwKzAyOjAwIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjJhMjg5M2QxLTBhZTctZWQ0MS04YmI2LWFhOGQ3YzQ3ZjViYyIgeG1wTU06RG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOmVjODM0ZGNhLWM1ZjItNWY0Zi1hNzM2LWZiNWQwZGMxOTkyMSIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjIwYmNmOTFmLTJjMTAtMDQ0NC1iNGUzLWE3MTBlNmYzYmNjMiIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9InNSR0IgSUVDNjE5NjYtMi4xIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyI+DQogICAgICA8eG1wTU06SGlzdG9yeT4NCiAgICAgICAgPHJkZjpTZXE+DQogICAgICAgICAgPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6MjBiY2Y5MWYtMmMxMC0wNDQ0LWI0ZTMtYTcxMGU2ZjNiY2MyIiBzdEV2dDp3aGVuPSIyMDIwLTA0LTIzVDA4OjI2OjI0KzAyOjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjEuMCAoV2luZG93cykiIC8+DQogICAgICAgICAgPHJkZjpsaSBzdEV2dDphY3Rpb249InNhdmVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjRlZDE2ZTc5LTgwNDktMjk0Zi04YmZlLWNkZjY3ZWM4ZDg0MyIgc3RFdnQ6d2hlbj0iMjAyMC0wNC0yM1QwODoyNjoyNCswMjowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDIxLjAgKFdpbmRvd3MpIiBzdEV2dDpjaGFuZ2VkPSIvIiAvPg0KICAgICAgICAgIDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDoyYTI4OTNkMS0wYWU3LWVkNDEtOGJiNi1hYThkN2M0N2Y1YmMiIHN0RXZ0OndoZW49IjIwMjAtMDYtMDVUMDk6MTc6MjArMDI6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCAyMS4xIChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIgLz4NCiAgICAgICAgPC9yZGY6U2VxPg0KICAgICAgPC94bXBNTTpIaXN0b3J5Pg0KICAgICAgPHBob3Rvc2hvcDpEb2N1bWVudEFuY2VzdG9ycz4NCiAgICAgICAgPHJkZjpCYWc+DQogICAgICAgICAgPHJkZjpsaT4xRDQ2MTVGMkI0QTEyNjgxM0YzNTZBQUMxNzE0ODVGODwvcmRmOmxpPg0KICAgICAgICAgIDxyZGY6bGk+NDEzQTgyMEU0Mzc1NTk0QUMwMDQ1OUE0RDUyNzU0N0Q8L3JkZjpsaT4NCiAgICAgICAgICA8cmRmOmxpPjRBQjA3NzAyOEVFMkM0Q0NFODU2RDU5OTM4NTMxQ0I5PC9yZGY6bGk+DQogICAgICAgICAgPHJkZjpsaT44RkI3RDYzQkZCQ0I0RDFBQkRFQ0MyQTNDNkEwQ0YxRDwvcmRmOmxpPg0KICAgICAgICAgIDxyZGY6bGk+QkE2MjAwODg0NkQ5NkRFQjMxNEY1QkI4MjkwOTQwRjI8L3JkZjpsaT4NCiAgICAgICAgICA8cmRmOmxpPmFkb2JlOmRvY2lkOnBob3Rvc2hvcDoxODhkNGZkNy0yYTBiLTk1NGQtOWU3Mi0yNGZkNGI1YTk5YWI8L3JkZjpsaT4NCiAgICAgICAgICA8cmRmOmxpPmFkb2JlOmRvY2lkOnBob3Rvc2hvcDoyOWU3YTExYi1iMzk2LWU0NDUtYjM3MC04Yjk1ODYyYTY0YTA8L3JkZjpsaT4NCiAgICAgICAgICA8cmRmOmxpPnhtcC5kaWQ6MDEyODYxNWQtZGM0ZC1lODQ2LTlhNjgtYjk2MGU3ZmY4YmVjPC9yZGY6bGk+DQogICAgICAgICAgPHJkZjpsaT54bXAuZGlkOjgzMWNkNDQ3LWJlNGUtMWQ0ZS1hMTI4LWNjM2VmODJhZTEzMDwvcmRmOmxpPg0KICAgICAgICAgIDxyZGY6bGk+eG1wLmRpZDpDNTY5MDAwOTBGNTQxMUU4QUYyQzg2M0JFRjEyMTlFODwvcmRmOmxpPg0KICAgICAgICAgIDxyZGY6bGk+eG1wLmRpZDpFRDI1NkVBMTBGNkVFOTExODA4NzhFMUNBOTNENDBBNzwvcmRmOmxpPg0KICAgICAgICAgIDxyZGY6bGk+eG1wLmRpZDpiOWVhN2I4ZS0xM2NiLTg1NDUtOGEy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",
+      "bpp": 32,
+      "alwaysBuild": false
+    }
+  ],
+  "colors": [
+    {
+      "objID": "a3333659-ca35-4e6c-e434-d9dd1aa3b7d8",
+      "name": "color"
+    },
+    {
+      "objID": "f111d279-a86c-40ff-8739-063e95629d7f",
+      "name": "background_color"
+    }
+  ],
+  "themes": [
+    {
+      "objID": "728af2e4-0a31-4f5c-b5cf-8fbdc345e872",
+      "name": "default",
+      "colors": [
+        "#ffffff",
+        "#404040"
+      ]
+    }
+  ]
+}
