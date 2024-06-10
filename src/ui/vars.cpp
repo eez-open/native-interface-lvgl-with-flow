@@ -7,8 +7,8 @@
 #include "ui.h"
 
 void init_vars() {
-    // initialize flow "users" flow variable, which is of type "array:User", i.e. array of Users
-    ArrayOfUserValue users(4);
+// initialize flow "users" flow variable, which is of type "array:User", i.e. array of Users
+    ArrayOfUserValue users(3);
 
     {   
         // initialize single User struct value
@@ -22,23 +22,16 @@ void init_vars() {
 
     {   
         UserValue user;
-        user.name("member1");
+        user.name("member");
         user.role(UserRole_Member);
         users.at(1, user);
     }
 
     {   
         UserValue user;
-        user.name("member2");
-        user.role(UserRole_Member);
-        users.at(2, user);
-    }
-
-    {   
-        UserValue user;
         user.name("admin");
-        user.role(UserRole_Guest);
-        users.at(3, user);
+        user.role(UserRole_Admin);
+        users.at(2, user);
     }
 
     flow::setGlobalVariable(FLOW_GLOBAL_VARIABLE_USERS, users);    

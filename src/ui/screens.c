@@ -2,6 +2,7 @@
 #include "images.h"
 #include "fonts.h"
 #include "actions.h"
+#include "vars.h"
 #include "styles.h"
 #include "ui.h"
 
@@ -13,9 +14,11 @@ static void event_handler_cb_main_obj0(lv_event_t *e) {
     void *flowState = e->user_data;
     if (event == LV_EVENT_VALUE_CHANGED) {
         lv_obj_t *ta = lv_event_get_target(e);
-        int32_t value = lv_dropdown_get_selected(ta);
         if (tick_value_change_obj != ta) {
-            assignIntegerProperty(flowState, 2, 4, value, "Failed to assign Selected in Dropdown widget");
+            int32_t value = lv_dropdown_get_selected(ta);
+            if (tick_value_change_obj != ta) {
+                assignIntegerProperty(flowState, 10, 4, value, "Failed to assign Selected in Dropdown widget");
+            }
         }
     }
 }
@@ -24,7 +27,7 @@ static void event_handler_cb_main_obj1(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 9, 0);
+        flowPropagateValue(flowState, 11, 0);
     }
 }
 
@@ -32,7 +35,7 @@ static void event_handler_cb_home_obj3(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 0, 0);
+        flowPropagateValue(flowState, 3, 0);
     }
 }
 
@@ -57,9 +60,11 @@ static void event_handler_cb_home_obj7(lv_event_t *e) {
     void *flowState = e->user_data;
     if (event == LV_EVENT_VALUE_CHANGED) {
         lv_obj_t *ta = lv_event_get_target(e);
-        int32_t value = lv_dropdown_get_selected(ta);
         if (tick_value_change_obj != ta) {
-            assignIntegerProperty(flowState, 9, 3, value, "Failed to assign Selected in Dropdown widget");
+            int32_t value = lv_dropdown_get_selected(ta);
+            if (tick_value_change_obj != ta) {
+                assignIntegerProperty(flowState, 10, 3, value, "Failed to assign Selected in Dropdown widget");
+            }
         }
     }
 }
@@ -130,7 +135,7 @@ void create_screen_main() {
 void tick_screen_main() {
     void *flowState = getFlowState(0, 0);
     {
-        const char *new_val = evalStringArrayPropertyAndJoin(flowState, 2, 3, "Failed to evaluate Options in Dropdown widget", "\n");
+        const char *new_val = evalStringArrayPropertyAndJoin(flowState, 10, 3, "Failed to evaluate Options in Dropdown widget", "\n");
         const char *cur_val = lv_dropdown_get_options(objects.obj0);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.obj0;
@@ -139,7 +144,7 @@ void tick_screen_main() {
         }
     }
     {
-        int32_t new_val = evalIntegerProperty(flowState, 2, 4, "Failed to evaluate Selected in Dropdown widget");
+        int32_t new_val = evalIntegerProperty(flowState, 10, 4, "Failed to evaluate Selected in Dropdown widget");
         int32_t cur_val = lv_dropdown_get_selected(objects.obj0);
         if (new_val != cur_val) {
             tick_value_change_obj = objects.obj0;
@@ -259,7 +264,7 @@ void create_screen_home() {
 void tick_screen_home() {
     void *flowState = getFlowState(0, 1);
     {
-        const char *new_val = evalTextProperty(flowState, 1, 3, "Failed to evaluate Text in Label widget");
+        const char *new_val = evalTextProperty(flowState, 2, 3, "Failed to evaluate Text in Label widget");
         const char *cur_val = lv_label_get_text(objects.obj2);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.obj2;
@@ -268,7 +273,7 @@ void tick_screen_home() {
         }
     }
     {
-        const char *new_val = evalTextProperty(flowState, 4, 3, "Failed to evaluate Text in Label widget");
+        const char *new_val = evalTextProperty(flowState, 5, 3, "Failed to evaluate Text in Label widget");
         const char *cur_val = lv_label_get_text(objects.obj4);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.obj4;
@@ -277,7 +282,7 @@ void tick_screen_home() {
         }
     }
     {
-        int32_t new_val = evalIntegerProperty(flowState, 9, 3, "Failed to evaluate Selected in Dropdown widget");
+        int32_t new_val = evalIntegerProperty(flowState, 10, 3, "Failed to evaluate Selected in Dropdown widget");
         int32_t cur_val = lv_dropdown_get_selected(objects.obj7);
         if (new_val != cur_val) {
             tick_value_change_obj = objects.obj7;
@@ -286,7 +291,7 @@ void tick_screen_home() {
         }
     }
     {
-        const char *new_val = evalTextProperty(flowState, 10, 3, "Failed to evaluate Text in Label widget");
+        const char *new_val = evalTextProperty(flowState, 11, 3, "Failed to evaluate Text in Label widget");
         const char *cur_val = lv_label_get_text(objects.obj8);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.obj8;
