@@ -1,4 +1,4 @@
-# Example of native interface between EEZ Studio and LVGL when EEZ Flow is not used
+# Example of native interface between EEZ Studio and LVGL when EEZ Flow is used
 
 ## User actions
 
