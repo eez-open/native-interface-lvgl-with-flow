@@ -58,7 +58,7 @@ In LVGL project with EEZ Flow you can define native global variables with the ge
 
 ## Accessing flow variables from the native code
 
-Chech the `vars.cpp` file to see how can you **set flow variable value** from native code (check function `init_vars` from `vars.cpp`), or how can you **get flow variable value** from natiave code (check function `get_var_greeting_str` from `vars.cpp`).
+Chech the [`vars.cpp`](https://github.com/eez-open/native-interface-lvgl-with-flow/blob/master/src/ui/vars.cpp) file to see how can you **set flow variable value** from native code (check function [`init_vars`](https://github.com/eez-open/native-interface-lvgl-with-flow/blob/master/src/ui/vars.cpp#L9) from [`vars.cpp`](https://github.com/eez-open/native-interface-lvgl-with-flow/blob/master/src/ui/vars.cpp)), or how can you **get flow variable value** from natiave code (check function `get_var_greeting_str` from `vars.cpp`).
 
 ## How to build project
 
