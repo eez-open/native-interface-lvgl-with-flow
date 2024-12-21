@@ -28,9 +28,9 @@ In LVGL project with EEZ Flow you can define user actions that can be attached t
 
   ![alt text](readme-images/add_event_handler_dialog.png)
 
-- Step 4: Implement user action in C
+- Step 4: Implement user action in C or C++
 
-  You need to implement in C++ function called `void action_<user action name>(lv_event_t * e)`. For example, if user action is called `inc_counter` you need to implement `void action_inc_counter(lv_event_t * e);`. Declaration of all user actions can be found in generated file `actions.h`. You can implement user actions in any C file or you can add `actions.cpp` file template in your project like this:
+  You need to implement in C or C++ a function called `void action_<user action name>(lv_event_t * e)`. For example, if user action is called `inc_counter` you need to implement `void action_inc_counter(lv_event_t * e);`. Declaration of all user actions can be found in generated file `actions.h`. You can implement user actions in any existing C or C++ file (or even INO file if you are on Arduino) or you can add `actions.cpp` file template in your project like this:
 
   ![alt text](readme-images/add_actions_cpp_file_template.png)
 
